@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <title>Job Posting Form</title>
+    <style>
+        body {
+            background-color: #E6E6FA;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin: 20px;
+            width: 94%;
+            border-color: rgb(255, 60, 0);
+            border-radius: 5px;
+            border-style: solid;
+            border-top-width: thick;
+        }
+
+        .menu2 {
+            font-size: x-large;
+            border-color: blue;
+            border-top-width: unset;
+            border-top-color: red;
+        }
+
+        .first {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: xx-large;
+            color:  blue;
+        }
+
+        .intro {
+            font-size: large;
+        }
+
+    </style>
+</head>
+
+<body align="center">
+    <br>
+    <h1 class="first"><u>Job Posting Form</u></h1>
+    <br>
+    <fieldset class="menu">
+        <legend><b>Enter your personal Details</b></legend>
+        <table align="center" class="intro" cellspacing=20>
+            <tr>
+                <td>First Name : <input type="text" placeholder="Enter your first name" required></td>
+                <td>Middle Name : <input type="text" placeholder="Enter your middle name"></td>
+                <td>Last Name : <input type="text" placeholder="Enter your last name" requireds></td>
+            </tr>
+            <tr>
+                <td>Contact No.: <input type="tel" placeholder="Enter your contact number" required></td>
+                <td>Email : <input type="email" placeholder="Enter your email" required></td>
+                <td>DOB : <input type="date"></td>
+            </tr>
+            <tr>
+                <td>Enter your city : <input type="text" placeholder="Enter your city name"></td>
+
+                <td>Select District :
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Junagadh">Junagadh</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Baroda">Baroda</option>
+                        <option value="Amreli">Amreli</option>
+                        <option value="Bhavnagar">Bhavnagar</option>
+                        <option value="Botad">Botad</option>
+                    </select>
+                </td>
+                </select>
+                </td>
+                <td>Select State :
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="assam">Assam</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="panjab">Panjab</option>
+                        <option value="panjab">Panjab</option>
+                        <option value="Odisha">Odisha</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br><br><br>
+    <fieldset class="menu">
+        <legend><b>Enter your Educational Details</b></legend>
+        <fieldset class="menu2">
+            <legend>Enter your Graduation Details</legend>
+            <table align="center" class="intro" cellspacing=15>
+                <tr>
+                    <td>Select University :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="GTU">GTU</option>
+                            <option value="PDPU">PDPU</option>
+                            <option value="Nirma">Nirma</option>
+                            <option value="DAIICT">DAIICT</option>
+                            <option value="parul">Parul</option>
+                            <option value="MSU">MSU</option>
+                        </select>
+                    </td>
+                    <td>Percentage : <input type="number" placeholder="Enter your percentage" required></td>
+                    <td>Passout Year : <input type="month"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset class="menu2">
+            <legend>Enter your HSC Details</legend>
+            <table align="center" class="intro" cellspacing=15>
+                <tr>
+                    <td>Select Education Board :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="GSEB">GSEB</option>
+                            <option value="GSHSEB">GSHSEB</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                        </select>
+                    </td>
+                    <td>Percentage : <input type="number" placeholder="Enter your percentage" required></td>
+                    <td>Passout Year : <input type="month"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset class="menu2">
+            <legend>Enter your SSC Details</legend>
+            <table align="center" class="intro" cellspacing=15>
+                <tr>
+                    <td>Select Education Board :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="GSEB">GSEB</option>
+                            <option value="GSHSEB">GSHSEB</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                        </select>
+                    </td>
+                    <td>Percentage : <input type="number" placeholder="Enter your percentage" required></td>
+                    <td>Passout Year : <input type="month"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </fieldset>
+    <br><br><br>
+    <fieldset class="menu">
+        <legend><b>Project Details</b></legend>
+        <table align="center" class="intro" cellspacing=20>
+            <tr>
+                <td>Project Name : <input type="text" placeholder="Enter your project name" required></td>
+                <td>Project Description : <textarea cols="50" rows="1"></textarea></td>
+                <td>Attch file : <input type="file"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br><br><br>
+    <fieldset class="menu">
+        <legend><b>Technical Skills</b></legend>
+        <table align="center" class="intro" cellspacing=20>
+            <tr>
+                <td>Area of Interest :
+                    <select>
+                        <option value="">Select</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="QA">QA</option>
+                        <option value="Development">Development</option>
+                        <option value="Management">Management</option>
+                        <option value="Server Configuration">Server Configuration</option>
+                        <option value="Documentation">Documentation</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Programming Languages :
+                    <input type="checkbox" name="python" id="p1" value="python">Python
+                    <input type="checkbox" name="java" id="j1" value="java">Java
+                    <input type="checkbox" name="php" id="p2" value="php">Php
+                    <input type="checkbox" name="Ruby" id="r1" value="ruby">Ruby
+                    <input type="checkbox" name="Go" id="g1" value="go">Go
+                    <input type="checkbox" name="Android" id="a1" value="android">Android
+                </td>
+            </tr>
+            <tr>
+                <td>Databases :
+                    <input type="checkbox" name="MySql" value="MySql">MySql
+                    <input type="checkbox" name="Sqlite" value="Sqlite">Sqlite
+                    <input type="checkbox" name="month" value="MongoDb">MongoDb
+                    <input type="checkbox" name="sqlserver" value="sqlserver">Sql Server
+                </td>
+            </tr>
+            <tr>
+                <td>Frameworks :
+                    <input type="checkbox" name="Django" value="Django">Django
+                    <input type="checkbox" name="Flask" value="Flask">Flask
+                    <input type="checkbox" name="ReactJs" value="ReactJs">ReactJs
+                    <input type="checkbox" name="MySql" value="MySql">MySql
+                    <input type="checkbox" name="Other" value="Other">Other
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br><br><br>
+    <fieldset class="menu">
+        <legend><b>Work Experience</b></legend>
+        <table align="center" class="intro" cellspacing=20>
+            <tr>
+                <td>Company Name : <input type="text" placeholder="Enter company name" required></td>
+                <td>Company Location :
+                    <textarea cols="30" rows="1" placeholder="Enter company location"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Joining Date : <input type="date" required></td>
+                <td>Leaving Date : <input type="date" required></td>
+            </tr>
+            <tr>
+                <td>Current CTC : <input type="number" placeholder="Enter current CTC" required></td>
+                <td>Expected CTC : <input type="number" placeholder="Enter expected CTC" required></td>
+            </tr>
+            <tr>
+                <td>Reason for Leaving : <textarea placeholder="What your reason for leaving" required></textarea></td>
+                <td>Attach File : <input type="file"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br><br><br>
+
+    <div>
+        <input type="submit" value="Submit" style="font-size: xx-large; color :green; padding: 5px; border-radius: 5px; background-color: black;" >
+        <input type="reset" style="font-size: xx-large; color: red; padding: 5px; border-radius: 5px; background-color: black;">
+    </div>
+</body>
+
+</html>
