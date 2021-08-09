@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        Registration Form
+    </title>
+    <style>
+        fieldset{
+            background-color: rgb(207, 125, 31);
+            color: white;
+            width: 40%;
+        }
+        legend{
+            background-color:maroon;
+            color: white;
+            padding: 5px 10px;
+        }
+        input{
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#cf7d1f">
+    <br>
+    <br>
+    <center>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <form method="post">
+                Sex: <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female <br>
+                Birthday: <input type="date"><br>
+                State: <input type="text" value="Ohio"><br>
+                Country: <input type="text" value="United States">
+            </form>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Site Registration</legend>
+            <form method="post">
+                Username: <input type="text" name="username"><br>
+                Password: <input type="password" name="password"><br>
+                Retype Password: <input type="password" name="password"><br>
+                Email address: <input type="email" name="email"><br>
+                Retype email address: <input type="email" name="email">
+            </form>
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit" style="background-color: green;">
+    </center>
+</body>
+
+</html>
