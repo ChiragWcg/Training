@@ -1,0 +1,45 @@
+body{
+    font-family: 'Georama', sans-serif;
+    /* border: 3px solid red; */
+    background-color:cornsilk;
+    background-image: url(/grd.jpg);
+    background-repeat:no-repeat;
+    background-position: initial;
+    background-size:1250px 570px;
+    background-attachment: fixed;
+}
+fieldset{
+    border: 3px solid blueviolet;
+}
+
+legend{
+    color: red;
+    font-size: larger;
+    text-shadow: 2px 2px 3px yellow;
+}
+a{
+    color: red;
+    text-decoration:none;
+}
+a:hover{
+    color: blue;
+}
+
+table{
+    background-image: url('/pizza1.jpg');
+    background-size: 415px 350px;
+    /* background-repeat:repeat; */
+    /* background-position:initial; */
+    text-transform: none;
+    border-block-color: green;    
+    font-family: 'STIX Two Text', serif;
+    font-style: normal;
+    margin: 30px 30px 60px 30px;
+    padding: 1px;
+    padding-block: 5px;
+    text-decoration:none;
+    /* text-shadow: 2px 2px 3px yellow; */
+    letter-spacing: normal;
+    word-spacing: 1px;
+    outline: red;
+}

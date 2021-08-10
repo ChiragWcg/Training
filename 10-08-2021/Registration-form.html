@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <title>Job Posting Form</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+        body {
+            background-color: #E6E6FA;
+            background-image: url(/grd2.jpg);
+            background-repeat: no-repeat;
+            background-position: initial;
+            background-size: 1250px 570px;
+            background-attachment: fixed;
+        }
+
+        .menu {
+            font-size: x-large;
+            margin: 20px;
+            width: 94%;
+            border-color: blue;
+            border-radius: 5px;
+            border-style: solid;
+            border-top-width: thick;
+        }
+
+        .menu2 {
+            font-size: x-large;
+            border-color: red;
+            border-top-width: unset;
+            border-top-color: red;
+        }
+
+        .first {
+            font-family: 'Georama', sans-serif;
+            /* font-family: 'STIX Two Text', serif; */
+            /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+            font-size: xx-large;
+        }
+
+        .intro {
+            font-size: large;
+        }
+
+        a {
+            color: red;
+        }
+
+        a:hover {
+            color:blue;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <br>
+    <form method="POST" enctype="multipart/form-data">
+        <a href="">
+            <h1 class="first">Registration Form</h1>
+        </a>
+        <br>
+        <fieldset class="menu">
+            <legend><a href="">
+                    <b>Enter your personal Details</b></h1>
+                </a>
+            </legend>
+            <table align="center" class="intro" cellspacing=20>
+                <tr>
+                    <td>First Name : <input type="text" placeholder="Enter your first name" required></td>
+                    <td>Last Name : <input type="text" placeholder="Enter your last name" requireds></td>
+                    <td>Gender : <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contact No.: <input type="tel" placeholder="Enter your contact number" required></td>
+                    <td>Email : <input type="email" placeholder="Enter your email" required></td>
+                    <td>DOB : <input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Enter your city : <input type="text" placeholder="Enter your city name"></td>
+
+                    <td>Select District :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="Junagadh">Junagadh</option>
+                            <option value="Rajkot">Rajkot</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Baroda">Baroda</option>
+                            <option value="Amreli">Amreli</option>
+                            <option value="Bhavnagar">Bhavnagar</option>
+                            <option value="Botad">Botad</option>
+                        </select>
+                    </td>
+                    </select>
+                    </td>
+                    <td>Select State :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="assam">Assam</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="panjab">Panjab</option>
+                            <option value="panjab">Panjab</option>
+                            <option value="Odisha">Odisha</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        <br><br><br>
+
+        <fieldset class="menu">
+            <legend><a href="">
+                <b>Technical Skills</b></h1>
+            </a>
+        </legend>
+            <table align="center" class="intro" cellspacing=20>
+                <tr>
+                    <td>Area of Interest :
+                        <select>
+                            <option value="">Select</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="QA">QA</option>
+                            <option value="Development">Development</option>
+                            <option value="Management">Management</option>
+                            <option value="Server Configuration">Server Configuration</option>
+                            <option value="Documentation">Documentation</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Programming Languages :
+                        <input type="checkbox" name="python" id="p1" value="python">Python
+                        <input type="checkbox" name="java" id="j1" value="java">Java
+                        <input type="checkbox" name="php" id="p2" value="php">Php
+                        <input type="checkbox" name="Ruby" id="r1" value="ruby">Ruby
+                        <input type="checkbox" name="Go" id="g1" value="go">Go
+                        <input type="checkbox" name="Android" id="a1" value="android">Android
+                    </td>
+                </tr>
+                <tr>
+                    <td>Databases :
+                        <input type="checkbox" name="MySql" value="MySql">MySql
+                        <input type="checkbox" name="Sqlite" value="Sqlite">Sqlite
+                        <input type="checkbox" name="month" value="MongoDb">MongoDb
+                        <input type="checkbox" name="sqlserver" value="sqlserver">Sql Server
+                    </td>
+                </tr>
+                <tr>
+                    <td>Frameworks :
+                        <input type="checkbox" name="Django" value="Django">Django
+                        <input type="checkbox" name="Flask" value="Flask">Flask
+                        <input type="checkbox" name="ReactJs" value="ReactJs">ReactJs
+                        <input type="checkbox" name="MySql" value="MySql">MySql
+                        <input type="checkbox" name="Other" value="Other">Other
+                        <input type="hidden" name="Skills" value="other">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        
+        <br><br><br>
+
+        <div>
+            <input type="submit" value="Submit"
+                style="font-size: xx-large; color :green; padding: 5px; border-radius: 5px; background-color: black;">
+            <input type="reset"
+                style="font-size: xx-large; color: red; padding: 5px; border-radius: 5px; background-color: black;">
+        </div>
+    </form>
+</body>
+
+</html>

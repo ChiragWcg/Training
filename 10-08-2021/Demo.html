@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap" rel="stylesheet"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap'); */
+      
+        table {
+            border-bottom: rgb(0, 26, 255);
+            border-color: rgb(31, 44, 223);
+            border-style: solid;
+            font-style: bold;
+            font-size: larger;
+            color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <fieldset>
+            <legend>
+                <a href=""><h3>Pizza Shop - UAE</h3></a>
+            </legend>
+            <table border="1" cellspacing="4" cellpadding=4 width="35%" style="border-radius: 4px;" ;>
+                <tr>
+                    <th colspan="2"><a href="">Pizza Shop</a></th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" placeholder="Enter your name" required></td>
+                </tr>
+                <tr>
+                    <td>Pizza Topping</td>
+                    <td><input type="radio" name="pizza">Supreme <br>
+                        <input type="radio" name="pizza">Vegetarian <br>
+                        <input type="radio" name="pizza">Hawaiian
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pizza Sauce</td>
+                    <td><select>
+                            <option value="tomato">Tomato</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Optional Extras</td>
+                    <td><input type="checkbox">Extra Cheese <br>
+                        <input type="checkbox">Gluten Free Base
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Delivery Instructions: <br>
+                        <textarea cols="40" rows="1"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Send my Order"
+                            style="font-size: smaller; font-family: Arial, Helvetica, sans-serif; color: red; background-color:cyan">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </center>
+</body>
+
+</html>
