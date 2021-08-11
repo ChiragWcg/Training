@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <style>
+        a {
+            color: white;
+            text-shadow: 2px 2px 3px red;
+            padding: 15px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            color: blue;
+            text-shadow: 2px 2px 3px yellow;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(228, 59, 8);
+        }
+
+        body {
+            background-image: linear-gradient(to left, red, yellow);
+            background-attachment: fixed;
+            background-position: initial;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            border: red;
+            font-size: x-large;
+            /* margin: 30px;
+            padding: 20px; */
+        }
+
+        td {
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <center>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Photos</a></li>
+        </ul>
+    </center>
+    <br><br><br>
+
+    <fieldset>
+        <legend><a href="#">Contact Form</a></legend>
+        <table align="center" width="40%">
+            <tr>
+                <td><a href="#">First Name</a></td>
+                <td><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Last Name</a></td>
+                <td><input type="text" name=lname" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Contact</a></td>
+                <td><input type="number" name="contact" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Email</a></td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><a href="#">Gender</a></td>
+                <td><input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#">DOB</a></td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+        </table><br>
+        <center>
+            <div>
+                <input type="submit" value="Submit"
+                    style="font-size: large; color :green; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+                <input type="reset"
+                    style="font-size: large; color: red; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+            </div>
+        </center>
+    </fieldset>
+
+</body>
+
+</html>
