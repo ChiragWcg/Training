@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <style>
+        a {
+            color: white;
+            text-shadow: 2px 2px 3px red;
+            padding: 15px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            color: blue;
+            text-shadow: 2px 2px 3px yellow;
+        }
+
+        body {
+            background-image: url(/grd.jpg);
+            background-attachment: fixed;
+            background-position: initial;
+            background-size: 1242px 597px;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            border: red;
+            font-size: x-large;
+            /* margin: 30px;
+            padding: 20px; */
+        }
+
+        td {
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <center>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Portfolio</a>
+    </center>
+    <br><br><br>
+
+    <fieldset>
+        <legend><a href="#">Registration Form</a></legend>
+        <table align="center" width="40%">
+            <tr>
+                <td><a href="#">First Name</a></td>
+                <td><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Last Name</a></td>
+                <td><input type="text" name=lname" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Contact</a></td>
+                <td><input type="number" name="contact" required></td>
+            </tr>
+            <tr>
+                <td><a href="#">Email</a></td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td><a href="#">Gender</a></td>
+                <td><input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#">DOB</a></td>
+                <td><input type="date" name="" id=""></td>                
+            </tr>
+        </table><br>
+        <center>
+            <div>
+                <input type="submit" value="Submit"
+                    style="font-size: large; color :green; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+                <input type="reset"
+                    style="font-size: large; color: red; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+            </div>
+        </center>
+    </fieldset>
+
+</body>
+
+</html>
