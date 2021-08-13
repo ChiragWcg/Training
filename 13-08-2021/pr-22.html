@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    <h1>Pr-22. Make a simple calculator using switch case. a. 1.Addition
+        b. 2.Subtraction
+        c. 3.Multiplication
+        d. 4.Division
+    </h1>
+
+    <script type="text/javascript">
+        var a = prompt('Enter first value');
+        document.write(a);
+        document.write('<br/>');
+        var b = prompt('Enter second value');
+        document.write(b);
+        document.write('<br/>');
+        var operation = prompt(',+,-,*,/');
+        document.write(operation)
+        document.write('<br/>');
+        var c;
+
+        if (b != 0) {
+            switch (operation) {
+                case "+":
+                    c = a + b;
+                    break;
+                case '-':
+                    c = a - b;
+                    break;
+                case '*':
+                    c = a * b;
+                    break;
+                case '/':
+                    c = a / b;
+                    break;
+
+                default:
+                    c = 'Select valid operation.'
+            }
+        }
+
+        document.write('Output value of operation is ' + c);
+
+    </script>
+</body>
+
+</html>

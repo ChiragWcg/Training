@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    <h2>Pr-23. Take 5 numbers and calculate percentage. According to that percentage
+        print grade.  If marks <50 then Grade is F.  if marks>=50 <60 then Grade is D.  if marks>=60 <70 then Grade
+                    is C.  if marks>=70 <80 then Grade is B.  if marks>=80 <90 then Grade is A.  if marks>=90 then
+                            Grade is A+
+    </h2>
+
+    <script type="text/javascript">
+
+        var a = Number(prompt('Enter first value'));
+        var b = Number(prompt('Enter second value'));
+        var c = Number(prompt('Enter third value'));
+        var d = Number(prompt('Enter fourth value'));
+        var e = Number(prompt('Enter fifth value'));
+        document.write('<br/>');
+
+        var sum = a+b+c+d+e;
+        var result = sum / 5 ; 
+
+        document.write('Total Percentage is : ' + result + '%');
+        document.write('<br/>')
+
+        if (result < 50) {
+            document.write("Grade : F");
+        }
+        else if (result >= 50 && result <= 60) {
+            document.write("Grade : D");
+        }
+        else if (result >= 60 && result <= 70) {
+            document.write("Grade : C");
+        }
+        else if (result >= 70 && result <= 80) {
+            document.write("Grade : B");
+        }
+        else if (result >= 80 && result <= 90) {
+            document.write("Grade : A");
+        }
+        else if (result >= 90 && result <= 100) {
+            document.write("Grade : A+");
+        }
+
+    </script>
+</body>
+
+</html>
