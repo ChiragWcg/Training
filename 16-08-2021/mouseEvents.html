@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Javascript Events</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.write('<h2>Mouse Events</h2>')
+        document.write('<br/>')
+
+        function demo() {
+            alert('Demo Alert message.');
+        }
+
+        function bigImg(x) {
+            x.style.height = "100px";
+            x.style.width = "100px";
+        }
+        function smallImg(x) {
+            x.style.height = "60px";
+            x.style.width = "60px";
+        }
+
+        function big(x) {
+            x.style.backgroundColor = 'red';
+            x.style.fontSize = "70px";
+            x.innerHTML = "Click Out";
+        }
+        function small(x) {
+            x.style.backgroundColor = 'blue';
+            x.style.fontSize = "40px";
+            x.innerHTML = "Click Me";
+        }
+
+        function big(y) {
+            y.style.backgroundColor = "green";
+            y.style.fontSize = "70px";
+            y.innerHTML = "Hiii…";
+        }
+        
+
+    </script>
+    <input type="button" onclick="demo()" value="Click here."><br><br>
+    <img src="/nodejs.png" alt="python" height="50px" width="50px" onmouseover="bigImg(this)"
+        onmouseout="smallImg(this)">
+    <br><br>
+    <div onmousedown="big(this)" onmouseup="small(this)">Hello, World !</div>
+    <div onmousemove="big(this)">Hello World</div>
+    
+
+</body>
+
+</html>

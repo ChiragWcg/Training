@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Form Events</title>
+</head>
+
+<body>
+
+    <form name="fname" onsubmit="myfun()">
+        First Name : <input type="text" name="nm" onfocus="demo()"><br><br>
+        Last Name : <input type="text" name="lm"><br><br>
+        <input type="submit" value="Submit"><br><br>
+
+    </form>
+
+    <form name="frm">
+        Middle Name : <input type="text" name="mm" onfocus="blurf()"><br><br>
+        <input type="submit" value="Submit"><br><br>
+    </form>
+
+    <form name="choice">
+        <select name="opt" onchange="mychoice()">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Go">Go</option>
+            <option value="HTML">HTML</option>
+        </select>
+    </form>
+
+    <script type="text/javascript">
+        function demo() {
+            fname.nm.style.backgroundColor = "cyan";
+            fname.nm.style.width = "300px";
+        }
+        
+        function myfun() {
+            alert('Submitted..');
+        }
+
+        function blurf() {
+            frm.mm.value = frm.mm.value.toUpperCase();
+            frm.mm.style.backgroundColor = "red";
+            frm.mm.style.color = "cyan";
+        }
+
+        function mychoice() {
+            var a = choice.opt.value;
+            document.write("Selected value : " + a);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+<html>

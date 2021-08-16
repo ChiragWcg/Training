@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Date-Time Object</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        document.write('<h3>Date Object :</h3>')
+        var a = new Date();
+        var date = a.getDate();
+        var month = a.getMonth() + 1;
+        var year = a.getFullYear();
+
+        document.write(date + "-" + month + "-" + year + "<br/>");
+        document.write(a);
+
+        document.write('<h3>Time Object :</h3>');
+
+        var h = a.getHours();
+        var m = a.getMinutes();
+        var s = a.getSeconds();
+
+        document.write(h + ":" + m + ":" + s + "<br/>");
+        document.write(a);
+
+    </script>
+
+</body>
+
+</html>

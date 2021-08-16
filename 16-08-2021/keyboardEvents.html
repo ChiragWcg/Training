@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Key Board Events</title>
+</head>
+
+<body>
+
+    <form name="fname">
+        First Name : <input type="text" name="nm" onkeyup="upp1()">
+        First Name : <input type="text" name="lm" onkeydown="upp2()">
+        <!-- First Name : <input type="text" name="nm" onkeydown="upp()"> -->
+
+    </form>
+
+    <script type="text/javascript">
+        function upp1() {
+            fname.nm.value = fname.nm.value.toUpperCase();
+        }
+        function upp2() {
+            fname.lm.value = fname.lm.value.toUpperCase();
+        }
+    </script>
+
+</body>
+
+</html>

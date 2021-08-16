@@ -1,0 +1,88 @@
+<html>
+<html>
+<title>JavaScript</title>
+
+</html>
+
+<body>
+
+    <script type="text/javascript">
+        document.write('<h3>While Loop..</h3>');
+        var i = 0;
+        while (i <= 3) {
+            document.write('Serial No. ' + i);
+            document.write('<br/>');
+            i++;
+        }
+
+        document.write('<br/>')
+        document.write('<h3>Do While Loop..</h3>');
+        var i = 10;
+        do {
+            document.write('Serial No. ' + i);
+            document.write('<br/>');
+            i++
+        }
+        while (i <= 8)
+
+        document.write('<br/>')
+        document.write('<h3>For Loop..</h3>');
+        var i = 1;
+        for (i = 1; i <= 4; i++) {
+            document.write('Serial No. ' + i);
+            document.write('<br/>');
+        }
+
+        document.write('<br/>')
+        document.write('<h3>Break Statement</h3>');
+        for (i = 6; i <= 10; i++) {
+            if (i === 8) {
+                break;
+            }
+            document.write('Break ' + i);
+            document.write('<br/>');
+        }
+
+        document.write('<br/>')
+        document.write('<h3>Continue Statement</h3>');
+        for (i = 6; i <= 10; i++) {
+            if (i === 8) {
+                continue;
+            }
+            document.write('Break ' + i);
+            document.write('<br/>');
+        }
+
+        document.write('<br/>');
+        document.write('<h3>Function and Pop-up boxes</h3>');
+        function show_alert() {
+            alert('All Done');
+        }
+        function confirm_box() {
+            var rs = confirm('Press a button');
+            if (rs == true) {
+                document.write("correct.")
+            }
+            else {
+                document.write('Invalid')
+            }
+            // confirm('Confirm box here..');
+        }
+        function prompt_box() {
+            prompt('Prompt Box here..')
+        }
+
+        function demo(m, n) {
+            return m * n;
+        }
+        document.write('Result of function is : ' + demo(9, 4));
+        document.write('<br/>');
+
+    </script>
+    <input type="button" onclick="show_alert()" value="Show Alert box">
+    <input type="button" onclick="confirm_box()" value="Show Confirm box">
+    <input type="button" onclick="prompt_box()" value="Show Prompt box">
+
+</body>
+
+</html>
