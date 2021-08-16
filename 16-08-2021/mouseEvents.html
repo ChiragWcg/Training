@@ -5,9 +5,24 @@
 </head>
 
 <body>
+
+    <h1 onmouseover="style.color='red' " onmouseout="style.color='blue' ">Mouse Over and Mouse Out - Event.</h1>
+    <br>
+    <h2 onmousedown="demo2(this,'red')" onmouseup="demo2(this,'green')">On MouseUp and On Mouse Down - Event</h2>
+    <br>
+    <h1 id="header" ondblclick="demo3()">Double Click Here...</h1>
+
     <script type="text/javascript">
         document.write('<h2>Mouse Events</h2>')
         document.write('<br/>')
+
+        function demo2(Element, clr) {
+            Element.style.color = clr;
+        }
+
+        function demo3() {
+            document.getElementById('header').innerHTML = 'Event Fire...';
+        }
 
         function demo() {
             alert('Demo Alert message.');
@@ -38,7 +53,7 @@
             y.style.fontSize = "70px";
             y.innerHTML = "Hiii…";
         }
-        
+
 
     </script>
     <input type="button" onclick="demo()" value="Click here."><br><br>
@@ -47,7 +62,7 @@
     <br><br>
     <div onmousedown="big(this)" onmouseup="small(this)">Hello, World !</div>
     <div onmousemove="big(this)">Hello World</div>
-    
+
 
 </body>
 

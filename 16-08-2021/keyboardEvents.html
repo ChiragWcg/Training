@@ -5,15 +5,21 @@
 </head>
 
 <body>
-
+    
     <form name="fname">
-        First Name : <input type="text" name="nm" onkeyup="upp1()">
+        First Name : <input type="text" name="nm" onkeyup="upp1()"><br><br>
         First Name : <input type="text" name="lm" onkeydown="upp2()">
         <!-- First Name : <input type="text" name="nm" onkeydown="upp()"> -->
 
     </form>
+    <h3>On Key Down Event</h3>
+    <input type="text" name="text" placeholder="Enter some text" onkeydown="demo1()">
 
     <script type="text/javascript">
+        function demo1(){
+            alert('You pressed a key inside the input field.')
+        }
+
         function upp1() {
             fname.nm.value = fname.nm.value.toUpperCase();
         }

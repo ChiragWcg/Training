@@ -5,21 +5,22 @@
 </head>
 
 <body>
-
+    <h3>On Focus Event</h3>
+    
     <form name="fname" onsubmit="myfun()">
-        First Name : <input type="text" name="nm" onfocus="demo()"><br><br>
+        First Name : <input type="text" id="fnm" name="nm" onfocus="demo1()"><br><br>
         Last Name : <input type="text" name="lm"><br><br>
         <input type="submit" value="Submit"><br><br>
 
     </form>
 
     <form name="frm">
-        Middle Name : <input type="text" name="mm" onfocus="blurf()"><br><br>
+        Middle Name : <input type="text" id="mn" name="mm" onblur="blurf()"><br><br>
         <input type="submit" value="Submit"><br><br>
     </form>
 
     <form name="choice">
-        <select name="opt" onchange="mychoice()">
+        <select id="opt" name="opt" onchange="mychoice()">
             <option value="Java">Java</option>
             <option value="Python">Python</option>
             <option value="Go">Go</option>
@@ -28,23 +29,29 @@
     </form>
 
     <script type="text/javascript">
-        function demo() {
-            fname.nm.style.backgroundColor = "cyan";
-            fname.nm.style.width = "300px";
+        function demo1(){
+            document.getElementById('fnm').style.background = 'orange';
         }
+
+        // function demo() {
+        //     fname.nm.style.backgroundColor = "cyan";
+        //     fname.nm.style.width = "300px";
+        // }
         
         function myfun() {
-            alert('Submitted..');
+            alert('Form Submitted..');
         }
 
         function blurf() {
             frm.mm.value = frm.mm.value.toUpperCase();
-            frm.mm.style.backgroundColor = "red";
-            frm.mm.style.color = "cyan";
+            // var x = document.getElementById('mn');
+            frm.mm.style.backgroundColor = "green";
+            frm.mm.style.color = "red";
         }
 
         function mychoice() {
-            var a = choice.opt.value;
+            var a = document.getElementById('opt').value;            
+            // var a = choice.opt.value;
             document.write("Selected value : " + a);
         }
 
