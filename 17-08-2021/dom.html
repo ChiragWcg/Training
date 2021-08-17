@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Example</title>
+</head>
+<body>
+    <h2 id="header"></h2>
+    <div id="data"></div>
+    <input type="button" value="Load Content" onclick="show()">
+    <br><br>
+    <form>
+        Enter name : <input type="text" name="" id="fname">
+                    <input type="button" value="Submit" onclick="demo()">
+    </form>
+    <br>
+    <p name="par"> Paragraph here</p>
+    
+    <ul>
+        <li name="list">Python</li>
+        <li name="list">Java</li>
+        <li name="list">Php</li>
+    </ul>
+    <br>
+    <button class="blue" onclick="blue()">Click here to change the color</button>
+    <br>
+    <p class="demo">Paragraph Text</p>
+    <br>
+    <input type="button" value="Form Data" onclick="formdata()">
+    <br><br>
+    <form name="valid">
+        Password : <input type="password" name="pass" onkeyup="validate()">
+        Strength : <span id="area">no strength</span>
+    </form>
+    
+
+    <script type="text/javascript">
+        alert(document.documentElement.getAttribute('lang'));
+        document.body.style.background = "cyan";
+        var a = document.head.firstElementChild.nodeName;
+        document.write(a);
+        document.write('<br/>');
+
+        // getElementById   ---   innerHTML - Load Content
+
+        function show(){
+            document.getElementById('data').innerHTML = '<h2>Header-2</h2>';
+        }
+
+        function demo(){
+            var res = document.getElementById('fname').value;
+            alert(res);
+        }
+
+        // getElementsByName
+
+        var pr = document.getElementsByName('par');
+        console.log('Result'+pr);
+        console.log(pr[0]);
+
+        var ele = document.getElementsByName("list");
+        console.log(ele);
+        console.log(ele[0]);
+        console.log(ele[1]);
+        console.log(ele[2]);
+
+        // getElementsByClassName
+
+        function blue(){
+            document.getElementsByClassName('blue')[0].style.background = 'blue';
+        }
+
+        var para = document.getElementsByClassName('demo');
+        console.log(para);
+        document.write("Number of selected elements: " + para.length);
+        para[0].style.background = 'yellow';
+        para[0].style.border = "2px solid blue";
+
+        // getElementsByTagName
+
+        document.getElementsByTagName('p')[0].style.backgroundColor = 'red';
+        var elem = document.getElementsByTagName('p');
+        for(var i in elem){
+            elem[i].style.background = 'orange';
+        }
+
+        
+
+        // Hidden Form Concept
+
+        var flag = true;
+
+        function formdata(){
+            var tempForm = "<form> Name : <input type='text' name='name'> ";
+            document.getElementById('data').innerHTML = "Data Loaded...";
+
+            if(flag){
+                document.getElementById('data').innerHTML = tempForm;
+                flag=false;
+            }
+            else{
+                document.getElementById('data').innerHTML = "";
+                flag=true;
+            }
+        }
+
+        //innerText  --- Form Validate
+
+
+        function validate(){
+            var msg;
+            if(document.valid.pass.value.length>4){
+                msg = 'Great';
+            }
+            else{
+                msg = 'Sorry';
+            }
+            document.getElementById('area').innerText = msg;
+        }
+
+
+    </script>
+</body>
+</html>

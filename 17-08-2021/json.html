@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Introduction of JSON</title>
+    </head>
+
+    <body>
+        <h2>Introduction of JSON</h2>
+        <script>
+            var json = '{"name":"rahul", "age":28, "country":"India"}';
+
+            // Parsing JSON Data
+            var par = JSON.parse(json);
+
+            alert('Name : '+ par.name);
+            alert('Age : '+ par.age);
+            alert('Country : '+ par.country);
+
+            // Encoding data as JSON  -- Object
+            var obj = '{"name":"rahul", "age":28, "country":"India"}';
+            var result = JSON.stringify(obj);
+            alert(result);
+
+            // Encoding data as JSON  -- Array
+            var arr = ["Java","Python","Go","Php"];
+            var result2 = JSON.stringify(arr);
+            alert(result2);
+
+        </script>
+    </body>
+</html>

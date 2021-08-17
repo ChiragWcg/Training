@@ -1,0 +1,52 @@
+<html>
+
+<body>
+    <p id="test">Paragraph text .</p>
+    <script type="text/javascript">
+
+        // Applying css on Elements        
+
+        var elem = document.getElementById("test");
+        elem.style.color = "blue";
+        elem.style.fontSize = "48px";
+        elem.style.fontWeight = "bold";
+
+        // Getting Style Information from Elements
+
+        alert(elem.style.color);
+        alert(elem.style.fontSize);
+        alert(elem.style.fontWeight);
+
+        // Object Creation
+
+        var book = {
+            'name' : 'Transedence',
+            'author' : 'Dr APJ Abdul Kalam',
+            'year' : 2015
+        };
+
+        // Accessing Object's Properties
+
+        document.write(book.author);
+        document.write('<br/>');
+        document.write(book['year']);
+        document.write('<br/>');
+        document.write('<br/>');
+
+        // Set the new properties in object
+        book.country = 'India';
+
+        // Deleting Object's Properties
+        delete book.year;
+
+        // Looping Through Object's Properties
+
+        for(var i in book){
+            document.write(book[i] + '<br>');
+        }
+
+    </script>
+
+</body>
+
+</html>

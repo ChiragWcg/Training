@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <style>
+        a {
+            color: white;
+            text-shadow: 2px 2px 3px red;
+            padding: 15px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        a:hover {
+            color: blue;
+            text-shadow: 2px 2px 3px yellow;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(228, 59, 8);
+        }
+
+        body {
+            background-image: linear-gradient(to left, rgb(28, 185, 146), yellow);
+            background-attachment: fixed;
+            background-position: initial;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            border: red;
+            font-size: x-large;
+            /* margin: 30px;
+            padding: 20px; */
+        }
+
+        td {
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <center>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Photos</a></li>
+        </ul>
+    </center>
+    <br><br>
+
+    <form>
+    <fieldset>
+        <legend><a href="#">Registration Form</a></legend>
+        <table align="center" width="40%">
+            <tr>
+                <td><a href="#">First Name</a></td>
+                <td><input type="text" name="fname" id="fnm"></td>
+            </tr>
+            <tr>
+                <td><a href="#">Last Name</a></td>
+                <td><input type="text" name=lname" id="lnm"></td>
+            </tr>
+            <tr>
+                <td><a href="#">Contact</a></td>
+                <td><input type="number" name="contact" id="con"></td>
+            </tr>
+            <tr>
+                <td><a href="#">Email</a></td>
+                <td><input type="email" name="email" id="ema"></td>
+            </tr>
+            <tr>
+                <td><a href="#" id="gen">Gender</a></td>
+                <td><input type="radio" name="gender">Male
+                    <input type="radio" name="gender">Female
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#">DOB</a></td>
+                <td><input type="date" name="" id="dob"></td>
+            </tr>
+        </table><br>
+        <center>
+            <div>
+                <input type="submit" value="Submit" onclick="sucess()"
+                    style="font-size: large; color :green; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+                <input type="reset"
+                    style="font-size: large; color: red; margin: 5px; padding: 5px; border-radius: 5px; background-color: black;">
+            </div>
+        </center>
+    </fieldset>
+</form>
+
+    <script type="text/javascript">
+        function sucess(){
+            var name1 = document.getElementById('fnm').value;
+            var name2 = document.getElementById('lnm').value;
+            var conta = document.getElementById('con').value;
+            var emai = document.getElementById('ema').value;
+            var dateb = document.getElementById('dob').value;
+            var fm = document.getElementById('gen').value;
+
+            if(name1 == ''){
+                alert('Please enter your first name');
+            }
+            else if(name2 == ''){
+                alert('Please enter your last name');                
+            }
+            else if(conta == ''){
+                alert('Please enter your contact number');
+            }
+            else if(emai == ''){
+                alert('Please enter valid email address');
+            }
+            else if(dateb == ''){
+                alert('Please enter your date of birth');
+            }
+            else if(fm == ''){
+                alert('Please select any one choice.');
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
