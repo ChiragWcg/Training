@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <h2>Conter app</h2>
+    <input type="text" name="" id="inc" value="0">
+    <input type="button" value="Click Me" onclick="incvalue()">
+    <script type="text/javascript">
+
+        function incvalue() {
+            var value = document.getElementById('inc').value;
+            if (value === null) {
+                value = 0;
+            }
+            else {
+                value++;
+            }
+            b = document.getElementById('inc').value = value;
+            console.log(b);
+
+            var n = localStorage.getItem('counter');
+            if (n === null) {
+                n = 1;
+            }
+            else {
+                n++;
+            }
+
+            localStorage.setItem('counter', n);
+
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Todo App</title>
+
+    <style>
+        fieldset {
+            text-align: center;
+            height: 50%;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        legend {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <br>
+    <fieldset>
+        <legend>Todo App</legend>
+        <input type="text" id="item" style="margin-top: 30px; height: 30px; width: 50%; font-size: large;">
+        <button onclick="addvalue()" style="width: 12%; height: 30px; margin-left: 15px; font-size: 16px;">Add Item</button>
+        <span id="invalid"></span>
+    </fieldset>
+
+
+    <script type="text/javascript">
+
+        n = 0;
+        arr = Array();
+
+        function addvalue() {
+            arr[n] = document.getElementById("item").value;
+
+            if (arr[n] != "") {
+                localStorage.setItem(n, JSON.stringify(arr[n]));
+                n++;
+                document.getElementById("item").value = "";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
