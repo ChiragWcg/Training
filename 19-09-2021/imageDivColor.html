@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Image Events</title>
+</head>
+
+<body>    
+    <h1>1) Image Content</h1>
+    <button id="btn">Click Me</button>
+    <p id="p1">Image here</p>
+    
+    <script type="text/javascript">
+
+        document.getElementById('btn').addEventListener('click', showdemo);
+        function showdemo() {
+            document.getElementById('p1').innerHTML = '<img src="/nodejs.png" id="myimg" style="width: 30%; height: 40%; margin-left: 30%;">';
+        }
+
+        document.getElementById('btn').addEventListener('mouseover', showdemo1);
+        function showdemo1() {
+            document.getElementById('p1').innerHTML = '<img src="/toyota.jpg" id="myimg" style="width: 30%; height: 40%; margin-left: 30%;">';
+        }
+
+        document.getElementById('btn').addEventListener('mouseout', showdemo2);
+        function showdemo2() {
+            document.getElementById('p1').innerHTML = '<img src="/light.jpeg" id="myimg" style="width: 30%; height: 40%; margin-left: 30%;">';
+        }
+
+    </script>
+
+    
+    <h1>2) Paragraph Content</h1>
+    <div id="div2">
+        <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+
+    <script type="text/javascript">
+
+        document.getElementById('div2').addEventListener('mouseup', content1)
+        function content1() {
+            document.getElementById('p2').innerHTML = 'Content has been changed';
+            document.getElementById('p2').style.color = 'red';
+            document.getElementById('p2').style.fontSize = 'xx-large';
+            document.getElementById('p2').style.backgroundColor = 'darkblue';
+        }
+
+        document.getElementById('div2').addEventListener('mousedown', content2)
+        function content2() {
+            document.getElementById('p2').innerHTML = 'Content not changed';
+            document.getElementById('p2').style.color = 'blue';
+            document.getElementById('p2').style.fontSize = 'x-large';
+            document.getElementById('p2').style.backgroundColor = 'cyan';
+            // document.getElementById('p2').innerHTML = "<span style = 'color:orange;'>heiii</span>"
+        }
+
+    </script>
+
+    
+    <h1>3) Color Content</h1>
+    <div id="div3">
+        <p id="p3" style="color:darkorange; font-size: large;">
+            Color Content
+        </p>
+    </div>
+
+    <script type="text/javascript">
+        document.getElementById('div3').addEventListener('mouseover', color1)
+        function color1() {
+            document.getElementById('p3').innerHTML = 'Color not changed';
+            document.getElementById('p3').style.color = 'black';
+            document.getElementById('p3').style.fontSize = 'xx-large';
+            document.getElementById('p3').style.backgroundColor = 'cyan';
+        }
+
+        document.getElementById('div3').addEventListener('mouseout', color2)
+        function color2() {
+            document.getElementById('p3').innerHTML = 'Color changed';
+            document.getElementById('p3').style.color = 'cyan';
+            document.getElementById('p3').style.fontSize = 'xx-large';
+            document.getElementById('p3').style.backgroundColor = 'black';
+        }
+        
+    </script>
+
+    
+
+</body>
+
+</html>

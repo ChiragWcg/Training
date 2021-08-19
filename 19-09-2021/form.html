@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>Form</title>
+
+    <style>
+        fieldset {
+            text-align: left;
+            font-size: x-large;
+            padding-top: 15px;
+            width: 30%;
+        }
+        #frm input[type="text"]{
+            float: right;
+        }
+
+    </style>
+
+</head>
+
+<body style="background-image: linear-gradient(red, yellow);">
+    <br>
+    <center>
+        <fieldset>
+            <legend>Form</legend>
+            <form id="frm">
+                First Name  <input type="text" id="fname" required><br><br>
+                Middle Name  <input type="text" id="mname" required><br><br>
+                Last Name  <input type="text" id="lname" required><br><br>
+                School Name  <input type="text" id="scname" required><br><br>
+                College Name  <input type="text" id="coname"><br><br>
+                University Name  <input type="text" id="unname" required><br><br>
+                City Name  <input type="text" id="cityname"><br><br>
+                District Name  <input type="text" id="disname"><br><br>
+                State Name  <input type="text" id="stname"><br><br>
+                Country Name  <input type="text" id="conname" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </center>
+
+    <script type="text/javascript">
+
+        document.getElementById('frm').addEventListener('mouseup', name1);
+        function name1() {
+            document.getElementById('fname').style.color = 'blue';
+            document.getElementById('fname').style.borderColor = 'red';
+            var a = document.getElementById('fname');
+            a.value = a.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mousedown', name2);
+        function name2() {
+            document.getElementById('mname').style.color = 'red';
+            document.getElementById('mname').style.borderColor = 'green';
+            var b = document.getElementById('mname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mouseover', name3);
+        function name3() {
+            document.getElementById('lname').style.color = 'orange';
+            document.getElementById('lname').style.borderColor = 'yellow';
+            var b = document.getElementById('lname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mouseout', name4);
+        function name4() {
+            document.getElementById('scname').style.color = 'red';
+            document.getElementById('scname').style.borderColor = 'green';
+            var b = document.getElementById('scname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('click', name5);
+        function name5() {
+            document.getElementById('coname').style.color = 'blue';
+            document.getElementById('coname').style.borderColor = 'red';
+            var b = document.getElementById('coname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('dblclick', name6);
+        function name6() {
+            document.getElementById('unname').style.color = 'orange';
+            document.getElementById('unname').style.borderColor = 'yellow';
+            var b = document.getElementById('unname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mouseup', name7);
+        function name7() {
+            document.getElementById('cityname').style.color = 'red';
+            document.getElementById('cityname').style.borderColor = 'green';
+            var b = document.getElementById('cityname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mousedown', name8);
+        function name8() {
+            document.getElementById('disname').style.color = 'blue';
+            document.getElementById('disname').style.borderColor = 'red';
+            var b = document.getElementById('disname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('mouseover', name9);
+        function name9() {
+            document.getElementById('stname').style.color = 'orange';
+            document.getElementById('stname').style.borderColor = 'green';
+            var b = document.getElementById('stname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('frm').addEventListener('dblclick', name10);
+        function name10() {
+            document.getElementById('coname').style.color = 'red';
+            document.getElementById('coname').style.borderColor = 'blue';
+            var b = document.getElementById('coname');
+            b.value = b.value.toUpperCase();
+        }
+
+    </script>
+
+</body>
+
+</html>

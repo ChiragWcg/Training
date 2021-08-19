@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <p id="countdown" style="font-size: xx-large; border: 2px solid red; width: 7%; text-align: center;"></p>
+
+    <script type="text/javascript">
+
+        var min = 15;
+        var time = min * 60;
+        var temp = document.getElementById('countdown');
+
+        setInterval(result, 1000);
+        function result() {
+            var minutes = Math.floor(time / 60);
+            var seconds = time % 60;
+
+            temp.innerHTML = minutes +':'+ seconds;
+            time--;
+        }
+
+    </script>
+</body>
+
+</html>
