@@ -1,0 +1,90 @@
+<html>
+<style>
+    p{
+        font-size: xx-large;
+    }
+</style>
+<head>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+    <script type="text/javascript">
+        // i = 0;
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+
+                $("p").slideToggle("slow");
+                alert("Sucess");
+
+                $('p').dblclick(function () {
+                    $(this).slideUp();
+                });
+
+                $('#p1').dblclick(function () {
+                    $(this).slideDown();
+                });
+
+                $("#p2").keyup(function () {
+                    $(this).css("background-color", "yellow");
+                });
+
+                $("#box").css("color", "blue").slideUp(2000).slideDown(2000);
+                $("#box")
+                    .animate({ width: "300px" })
+                    .animate({ height: "300px" })
+                    .animate({ marginLeft: "150px" })
+                    .animate({ borderWidth: "10px" })
+                    .animate({ opacity: 0.5 });
+
+                $("#box").animate({ height: "300px" });
+            });
+
+            $("#btn2").click(function () {
+                $("#box").stop();
+            });
+
+            $(".btn-hide").click(function () {
+                $("p").slideToggle();
+            });
+
+            // $('p').css('background','green');
+
+            // Show hidden paragraph
+            // $(".btn-show").click(function () {
+            //     $("p").show();
+            // });
+        });
+
+        //     $('input').keypress(function () {
+        //         $('span').text(i += 1);
+        //     });
+        // });
+
+            // click dblclick hover mouseenter mouseleave keydown keyup
+            // alert('Sucess..');
+
+    </script>
+
+</head>
+
+<body>
+    <br>
+    <button id="btn1">Animate height</button>
+    <button id="btn2">Stop Animate</button>
+    <br><br>
+    <div id="box" style="background:blue;height:100px;width:100px;margin:6px;"></div>
+
+
+    <!-- <button type="button" class="btn-hide">Slide Toggle</button> slideDown slideUp slideToggle -->
+
+    <!-- <button type="button" class="btn-hide">Fade In</button> Fade Out -->
+    <!-- <button type="button" class="btn-hide">Hide</button>  Toggle -->
+    <!-- <button type="button" class="btn-show">Show</button> -->
+    <p>Slide - Up Paragraph-1.</p>
+    <p id="p1">Slide - Down Paragraph-2.</p>
+    <p id="p2">Paragraph - 3.</p>
+
+    <p style="font-size: xx-large; background-color: rgb(0, 255, 64);">Paragraph here</p>
+    <!-- Name : <input type="text">
+    <p>Key Press <span>0</span></p> -->
+</body>
+
+</html>
