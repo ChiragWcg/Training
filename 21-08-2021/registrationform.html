@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+    <!-- <script src="/jquery.validate.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script> -->
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.js"></script>
+    <style>
+        fieldset {
+            text-align: left;
+            font-size: x-large;
+            padding-top: 15px;
+            width: 39%;
+        }
+        .error{
+            font-size: large;
+            color: red;
+        }
+        
+        
+    </style>
+
+</head>
+
+<body style="background-image: linear-gradient(rgb(0, 225, 255), rgb(204, 204, 46));">
+    <br>
+    <center>
+        <fieldset>
+            <legend>Registration Form</legend>
+            <form class="cmxform" id="commentForm" method="get" action="">
+                First Name <input type="text" name="fname" id="fname" minlength="2" required
+                    style="float: right;"><br><br>
+                Last Name <input type="text" name="lname" id="lname" minlength="2" required
+                    style="float: right;"><br><br>
+                E-mail <input type="email" id="email" required style="float: right;"><br><br>
+                Contact <input type="tel" name="ccontact" id="ccontact" minlength="8" required style="float: right;"><br><br>
+                DOB <input type="date" id="dob" name="dob" style="float: right; width: 177px;" required><br><br>
+                Age <input type="number" id="cage" name="cage" style="float: right;" required><br><br>
+                File <input type="file" id="cfile" name="cfile" style="float: right; width: 177px; font-size: small;" required><br><br>
+                Password <input type="password" id="password" name="password" minlength="6" style="float: right;" required><br><br>
+                Confirm Password <input type="password" id="cpassword" name="cpassword" minlength="6" required style="float: right;"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </center>
+
+    <script type="text/javascript">
+        $("#commentForm").validate();
+    </script>
+
+</body>
+
+</html>

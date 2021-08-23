@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Form Demo</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+    <script src="/jquery.validate.js"></script>
+
+    <style>
+        fieldset {
+            text-align: left;
+            font-size: x-large;
+            padding-top: 15px;
+            width: 40%;
+        }
+        .error{
+            font-size: large;
+            color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body style="background-image: linear-gradient(red, orange);">
+    <br>
+    <center>
+        <fieldset>
+            <legend>Form</legend>
+            <form class="cmxform" id="commentForm" method="get" action="">
+                First Name <input type="text" name="name" id="cname" minlength="2" required style="float: right;"><br><br>
+                Middle Name <input type="text" name="name2" id="cname2" minlength="2" required style="float: right;"><br><br>
+                Last Name <input type="text" name="name3" id="cname3" minlength="2" required style="float: right;"><br><br>
+                E-mail <input type="email" id="ema" required style="float: right;"><br><br>
+                Contact <input type="number" id="contact" name="contact" minlength="8" required style="float: right;"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </fieldset>
+    </center>
+
+    <script type="text/javascript">
+        $("#commentForm").validate();
+    </script>
+
+</body>
+
+</html>

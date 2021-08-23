@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Lightbox Example</title>
+  <link rel="stylesheet" href="/lightbox.css">
+  <style>
+    body{
+      background-image: linear-gradient(red, yellow);
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <section>
+      <h1>Lightbox Example</h1>
+      <h2>Two Images Here...</h2>
+      <div>
+        <a class="example-image-link" href="/images/burjAi.jpg" data-lightbox="example-1"><img class="example-image"
+            src="/images/burjAi.jpg" alt="image-1" width="350px" /></a>
+        <a class="example-image-link" href="/images/light.jpeg" data-lightbox="example-2"
+          data-title="Optional caption."><img class="example-image" src="/images/light.jpeg" width="350px"
+            alt="image-2" /></a>
+      </div>
+
+      <hr />
+
+      <h2>Four Images Here..</h2>
+      <div>
+        <a class="example-image-link" href="/images/highway.jpeg" data-lightbox="example-set"
+          data-title="Click the right half of the image to move forward."><img class="example-image"
+            src="/images/highway.jpeg" width="350px" alt="" /></a>
+        <a class="example-image-link" href="/images/lumi.jpeg" data-lightbox="example-set"
+          data-title="Or press the right arrow on your keyboard."><img class="example-image" src="/images/lumi.jpeg"
+            width="350px" alt="" /></a>
+        <a class="example-image-link" href="/images/controller.jpeg" data-lightbox="example-set"
+          data-title="The next image in the set is preloaded as you're viewing."><img class="example-image"
+            src="/images/controller.jpeg" width="350px" alt="" /></a>
+        <a class="example-image-link" href="/images/bulb.jpg" data-lightbox="example-set"
+          data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image"
+            src="/images/bulb.jpg" width="350px" alt="" /></a>
+      </div>
+    </section>
+  </center>
+
+
+  <script src="/lightbox.min.js"></script>
+
+</body>
+
+</html>
