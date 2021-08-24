@@ -5,13 +5,92 @@
     <script src="/jquery-3.6.0.min compressed.js"></script>
     <!-- <script src="/jquery.validate.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-    <script type="text/javascript" src="/js/formvalid.js"></script>
-
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script> -->
-    
-    
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.js"></script> -->
+
+    <script>
+        $().ready(function () {
+            $("#myform").validate({
+                rules: {
+                    fname: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    lname: {
+                        required: true,
+                        minlength: 3,
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    phone: {
+                        required: true,
+                        digits: true,
+                        minlength: 10,
+                        maxlength: 10,
+                    },
+                    dob: {
+                        required: true,
+                        date: true,
+                    },
+                    age: {
+                        required: true,
+                        min: 15,
+                        max: 95,
+                    },
+                    file: {
+                        required: true,
+                    },                    
+                    password: {
+                        required: true,
+                        minlength: 6,
+                        password: true,
+                    },
+                    cpassword: {
+                        equalTo: "#password",
+                    },
+                },
+
+                messages: {
+                    fname: {
+                        required: "Enter your first name",
+                        minlength: "Your name must be at least 2 characters long",
+                    },
+                    lname: {
+                        required: "Enter your last name",
+                        minlength: "Your name must be at least 2 characters long",
+                    },
+                    email: "Enter a valid email address",
+                    phone: {
+                        required: "Enter your contact number",
+                        minlength: "Contact nummber must be of 10",
+                        maxlength: "Contact nummber must be of 10",
+                    },
+                    dob: {
+                        required: "Enter your Date of Birth",
+                    },
+                    age: {
+                        required: "Enter your age",
+                        min: "Your age must be > 15",
+                        max: "Your age must be < 95",
+                    },
+                    file: {
+                        required: "Please choose any one file",
+                    },
+                    
+                    password: {
+                        required: "Please enter a password",
+                        minlength: "Your password must be at least 6 characters long",
+                    },
+                    cpassword: {
+                        required: "Please enter same password as above",
+                        equalTo: "#please enter password same as above",
+                    },
+                },
+            });
+        });
+    </script>
+
     <style>
         fieldset {
             text-align: left;
@@ -19,12 +98,11 @@
             padding-top: 15px;
             width: 39%;
         }
-        .error{
+
+        .error {
             font-size: large;
             color: red;
         }
-        
-        
     </style>
 
 </head>
@@ -34,26 +112,22 @@
     <center>
         <fieldset>
             <legend>Registration Form</legend>
-            <form class="cmxform" id="commentForm" method="get" action="">
-                First Name <input type="text" name="fname" id="fname" minlength="3" required
-                    style="float: right;"><br><br>
-                Last Name <input type="text" name="lname" id="lname" minlength="3" required
-                    style="float: right;"><br><br>
-                E-mail <input type="email" id="cemail" name="email" required style="float: right;"><br><br>
-                Contact <input type="number" name="ccontact" id="ccontact" minlength="8" required style="float: right;"><br><br>
+            <form id="myform" method="get">
+                First Name <input type="text" name="fname" id="fname" required style="float: right;"><br><br>
+                Last Name <input type="text" name="lname" id="lname" required style="float: right;"><br><br>
+                E-mail <input type="email" id="email" name="email" required style="float: right;"><br><br>
+                Contact <input type="number" name="phone" id="phone" required style="float: right;"><br><br>
                 DOB <input type="date" id="dob" name="dob" style="float: right; width: 177px;" required><br><br>
                 Age <input type="number" id="age" name="age" style="float: right;" required><br><br>
-                File <input type="file" id="cfile" name="cfile" style="float: right; width: 177px; font-size: small;" required><br><br>
-                Password <input type="password" id="password" name="password" minlength="6" style="float: right;" required><br><br>
-                Confirm Password <input type="password" id="confirm_password" name="confirm_password" minlength="6" required style="float: right;"><br><br>
+                File <input type="file" id="file" name="file" style="float: right; width: 177px; font-size: small;"
+                    required><br><br>
+                Password <input type="password" id="password" name="password" style="float: right;" required><br><br>
+                Confirm Password <input type="password" id="cpassword" name="cpassword" required
+                    style="float: right;"><br><br>
                 <input type="submit" value="Submit">
             </form>
         </fieldset>
     </center>
-
-    <script type="text/javascript">
-        $("#commentForm").validate();
-    </script>
 
 </body>
 
