@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Inline CKEditor </title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/inline/ckeditor.js"></script>
+    <style>
+        body {
+            background-image: linear-gradient(red, yellow);
+        }
+
+        p {
+            height: 260px;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1>Example of CKInline editor</h1>
+    <div id="editor">
+        <p>Write your content here.</p>
+    </div>
+    <script>
+        InlineEditor
+            .create(document.querySelector("#editor"))
+            .catch((error) => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>
