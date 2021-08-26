@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>JQuery Element</title>
+        <script src="/jquery-3.6.0.min compressed.js"></script>
+    </head>
+
+    <body>
+        <script>
+            $(document).ready(function(){
+                $('#btn').click(function(){
+                    $('#p').append('<b>Appended Text<b/>')
+                });
+                $('#btn2').click(function(){
+                    $('#p').prepend('<b>Prepended Text<b/>')
+                });
+                $('#btn3').click(function(){
+                    $('#p2').after('<b>After Append Text<b/>')
+                });
+                $('#btn4').click(function(){
+                    $('#p2').before('<b>Before Append Text<b/>')
+                });
+
+                $('#btn5').click(function(){
+                    $('#div').remove();
+                });
+                $('#btn6').click(function(){
+                    $('#div').empty();
+                });
+            });
+        </script>
+        <p id="p">
+            Paragraph - 1 Here
+        </p> 
+        <p id="p2">
+            Paragraph - 2 Here
+        </p>
+        <div id="div" style="border: 2px solid red; height: 90px;">
+            Divison Tag here.. <br>
+            Some content here
+            <p>Paragraph content</p>
+        </div> <br><br>
+        <input type="button" id="btn" value="Append text">
+        <input type="button" id="btn2" value="Prepend text"><br><br>
+        <input type="button" id="btn3" value="After Append text">
+        <input type="button" id="btn4" value="Before Appnd text"><br><br>
+        <input type="button" id="btn5" value="Remove content">
+        <input type="button" id="btn6" value="Remove Child content">
+
+    </body>
+</html>

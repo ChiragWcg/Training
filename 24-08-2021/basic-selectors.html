@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>JQuery Selectors</title>
+        <script src="/jquery-3.6.0.min compressed.js"></script>
+    </head>
+
+    <body>
+        <script>
+            $(document).ready(function(){
+                $('#btn').click(function(){
+                    $('[class]').append('<b>For all class<b/>')
+                });
+                $('#btn2').click(function(){
+                    $('[class="div1"]').append('<b>For specific class<b/>')
+                });
+                $('#btn3').click(function(){
+                    $('p').css('color','red');
+                });
+                $('#btn4').click(function(){
+                    $('p,h2').css('color','blue');
+                });
+                $('#btn5').click(function(){
+                    $('*').css('color','green');
+                });
+                $('#btn6').click(function(){
+                    $('.p1,.p3').css('color','red');
+                });
+            });
+        </script>
+        <p class="p1">Paragraph -1 here</p>
+        <p class="p2">Paragraph -2 here</p>
+        <p class="p3">Paragraph -3 here</p>
+        <h2>Heading -1</h2>
+        <h2>Heading -2</h2>
+        <div class="div1">Div content</div>
+        <div class="div2">Div 2 here</div><br>
+        <input type="button" id="btn" value="For all classes">
+        <input type="button" id="btn2" value="For specific class"><br><br>
+        <input type="button" id="btn3" value="Single Element">
+        <input type="button" id="btn4" value="For selected Elements">
+        <input type="button" id="btn5" value="For All Elements">
+        <input type="button" id="btn6" value="For selected classes">
+
+    </body>
+</html>

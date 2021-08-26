@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>JQuery Relational Selectors</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('div p').css('color', 'blue')
+            });
+            $('#btn2').click(function () {
+                $('div > p').css('color', 'violet')
+            });
+            $('#btn3').click(function () {
+                $('div + p').css('color', 'red');
+            });
+            $('#btn4').click(function () {
+                $('div ~ p').css('color', 'green');
+            });            
+        });
+    </script>
+    <div>
+        <p class="p1">Paragraph -1 here</p>
+        <span>
+            <p class="p2">Paragraph -2 here</p>
+        </span>
+        <h3>Heading -1</h3>
+    </div>
+    <div class="div1">Div 1 content</div>
+    <div class="div2">Div 2 content</div><br>
+    <p>Paragraph -3 here</p>
+    <div>
+        <p>Paragraph -4 here</p>
+    </div>
+    <p>Paragraph -5 here</p>
+
+    <input type="button" id="btn" value="all descendants ">
+    <input type="button" id="btn2" value="direct child"><br><br>
+    <input type="button" id="btn3" value="immediate child">
+    <input type="button" id="btn4" value="any sibling">    
+
+</body>
+
+</html>

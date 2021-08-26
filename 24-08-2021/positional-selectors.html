@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>JQuery Positional Selectors</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $('p:first').css('color', 'blue')
+            });
+            $('#btn2').click(function () {
+                $('p:last').css('color', 'violet')
+            });
+            $('#btn3').click(function () {
+                $('tr:even').css('color', 'red');
+            });
+            $('#btn4').click(function () {
+                $('tr:odd').css('color', 'blue');
+            });
+            $('#btn5').click(function () {
+                $("p:first-child").css('color', 'red');
+            });
+            $('#btn6').click(function () {
+                $('p:last-child').css('color', 'blue');
+            });
+        });
+    </script>
+    <div>
+        <p class="p1">Paragraph -1 here</p>
+        <p class="p2">Paragraph -2 here</p>
+        <p class="p3">Paragraph -3 here</p>
+    </div>
+    <h2>Heading -1</h2>
+    <h2>Heading -2</h2>
+    <div class="div1">Div 1 content</div>
+    <div class="div2">Div 2 content</div><br>
+    <div>
+        <p>Paragraph -4 here</p>
+        <p>Paragraph -5 here</p>
+    </div>
+
+    <input type="button" id="btn" value="first child">
+    <input type="button" id="btn2" value="last child"><br><br>
+    <input type="button" id="btn3" value="Even Elements">
+    <input type="button" id="btn4" value="Odd Elements"><br><br>
+    <input type="button" id="btn5" value="only first-child">
+    <input type="button" id="btn6" value="only last-child"><br><br>
+
+    <table>
+        <tr>
+            <td>a1</td>
+            <td>a2</td>
+        </tr>
+        <tr>
+            <td>b1</td>
+            <td>b2</td>
+        </tr>
+        <tr>
+            <td>c1</td>
+            <td>c2</td>
+        </tr>
+        <tr>
+            <td>d1</td>
+            <td>d2</td>
+        </tr>
+        <tr>
+            <td>e1</td>
+            <td>e2</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
