@@ -3,58 +3,36 @@
 <body>
     <script>
 
-        var i = prompt('Enter initial value');
-        document.write(i);
-        document.write('<br/>');
-        var a = prompt('Enter multiplication value');
-        document.write(a);
-        document.write('<br/>');
-        var b = prompt('Enter divison value');
-        document.write(b);
-        document.write('<br/>');
-        var c = Number(prompt('Enter addition value'));
-        document.write(c);
-        document.write('<br/>');
-        var d = prompt('Enter subtraction value');
-        document.write(d);
-        document.write('<br/>');
-
-        var obj = function () {            
-            this.i = i;
-
-            this.mul = function (i) {
-                this.i *= i;
+        class Calc {
+            constructor(initialValue) {
+                this.result = initialValue;
                 return this;
-            };
-
-            this.div = function (i) {
-                this.i /= i;
+            }
+            add(value) {
+                this.result = this.result + value;
                 return this;
-            };
-
-            this.add = function (i) {
-                this.i += i;
+            }
+            sub(value) {
+                this.result = this.result - value;
                 return this;
-            };
-
-            this.sub = function (i) {
-                this.i -= i;
+            }
+            mul(value) {
+                this.result = this.result * value;
                 return this;
-            };
+            }
+            div(value) {
+                this.result = this.result / value;
+                return this;
+            }
+            toString() {
+                return this.result;
+            }
+        }
+        var num = new Calc(5).add(5).sub(2).mul(2).div(2);
+        document.write(num);
+        alert(num);
 
-            this.print = function () {
-                console.log(this.i);
-            };
-
-        };
-
-        var x = new obj();
-        x.mul(a).div(b).add(c).sub(d);
-        x.print();
-
-        var res = JSON.stringify(x);
-        alert(res);
-        document.write('The Result is :'+res);
+        
     </script>
 </body>
 
