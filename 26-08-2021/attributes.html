@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+    <style>
+        .div1{
+            color: rgb(255, 166, 0);
+        }
+        .p1{
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("img").attr("width", "350");
+            });
+
+            $('#btn2').click(function () {
+                var $x = $('div');
+                $x.prop('color','black');
+                $x.append('color is :'+$x.prop('color'));
+                $x.removeProp('color');
+                $x.append('Now, color value is :'+$x.prop('color'));
+            });
+
+            $("#btn3").click(function () {
+                $("p").removeAttr('style');
+            });
+
+            $("#btn4").click(function () {
+                $("input:text").val('Enter name');
+            });
+
+            $("#btn5").click(function () {
+                $("div").removeClass('div1');
+            });
+            
+            $("#btn6").click(function () {
+                $("p:first").addClass('p1');
+            });
+        });
+    </script>
+
+    <img src="/nodejs.png" alt="img1" width="200" height="150">
+    <div class="div1">Div-1 Content..</div>
+    <div class="div1">Div-2 Content..</div>
+    <p style="color: red;">Paragraph - 1</p>
+    <p style="color: blue;">Paragraph - 2</p>
+    <input type="text" name="text"><br><br>
+
+    <button id="btn1">Change width of image</button>
+    <button id="btn2">Add-Remove property</button>
+    <button id="btn3">RemoveAttr style</button><br><br>
+    <button id="btn4">Set the value</button>
+    <button id="btn5">Remove class</button>
+    <button id="btn6">Add class</button>
+</body>
+
+</html>

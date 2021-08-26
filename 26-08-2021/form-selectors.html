@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>JQuery Form Selectors</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+    <h1>Form Selectors</h1>
+    <br>
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $(':input').css('color', 'red')
+            });
+            $('#btn2').click(function () {
+                $(':text').css('backgroundColor', 'cyan')
+            });
+            $('#btn3').click(function () {
+                $(':password').css('backgroundColor', 'blue');
+            });
+            $('#btn4').click(function () {
+                $(":radio").wrap("<span></span>").parent().css("background-color", "green");
+            });
+            $('#btn5').click(function () {
+                $(":checkbox").wrap("<span></span>").parent().css("background-color", "red");
+            });
+            $('#btn6').click(function () {
+                $(':button').css('backgroundColor', 'cyan');
+            });
+            $('#btn7').click(function () {
+                $(':submit').css('backgroundColor', 'yellow');
+            });
+            $('#btn8').click(function () {
+                $(':reset').css('backgroundColor', 'red');
+            });
+            $('#btn9').click(function () {
+                $(':image').css("border", "solid 3px red");
+            });
+            $('#btn10').click(function () {
+                $(':file').css('backgroundColor', 'blue');
+            });
+            $('#btn11').click(function () {
+                $(':enabled').css('backgroundColor', 'aqua');
+            });
+            $('#btn12').click(function () {
+                $(':disabled').css('backgroundColor', 'yellow');
+            });
+            $(':selected').css('backgroundColor', 'red');
+
+            $('#btn13').click(function () {
+                $(':checked').wrap("<span style='background-color:red'>");
+            });
+            $('#btn14').click(function () {
+                $('p:visible').append('This element is Visible.');
+            });
+            $('#btn15').click(function () {
+                $('div:hidden').slideDown(2000);
+            });
+
+        });
+    </script>
+
+    Fname : <input type="text" name="Gender">
+    Lname : <input type="text" name="Gender" disabled><br><br>
+    password1 : <input type="password" name="pas">
+    password2 : <input type="password" name="pas" disabled><br><br>
+    Gender : <input type="radio" name="Gender" value="male">
+    <input type="radio" name="Gender" value="female">
+    Hobbies : <input type="checkbox" name="sports" id="cricket">Cricket
+    <input type="checkbox" name="sports" id="chess" checked>Chess <br><br>
+    <input type="image" src="/nodejs.png" width="209" height="140">
+    File : <input type="file"><br><br>
+    Select your favourite Color:
+    <select>
+        <option>Red</option>
+        <option>blue</option>
+        <option>cyan</option>
+        <option selected>aqua</option>
+        <option>green</option>
+    </select>
+    <br>
+    <p style="color: blue;">Paragraph Content </p>
+    <div style="display: none; color: red;">Div Hidden Content</div>
+
+    <input type="button" id="btn" value="for all input types">
+    <input type="button" id="btn2" value="for all textboxes">
+    <input type="button" id="btn3" value="for all passwords">
+    <input type="button" id="btn4" value="for all radio boxes">
+    <input type="button" id="btn5" value="for all checkboxes"><br><br>
+    <input type="button" id="btn6" value="for all buttons">
+    <input type="button" id="btn7" value="for all submit buttons">
+    <input type="button" id="btn8" value="for all reset buttons">
+    <input type="button" id="btn9" value="for image tag">
+    <input type="button" id="btn10" value="for all files"><br><br>
+    <input type="button" id="btn11" value="for all enabled types">
+    <input type="button" id="btn12" value="for all disabled types">
+    <input type="button" id="btn13" value="for all checked">
+    <input type="button" id="btn14" value="For all Visible elements">
+    <input type="button" id="btn15" value="Show hidden elements">
+    <br><br>
+
+    <form>
+        <input type="submit" value="submit">
+        <input type="submit" value="submit2">
+        <input type="reset" value="reset">
+        <input type="reset" value="reset2">
+    </form>
+
+</body>
+
+</html>
