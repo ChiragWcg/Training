@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Key Board Events</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+
+    <form name="fname">
+        First Name : <input type="text" name="nm" onkeyup="upp1()"><br><br>
+        Middle Name : <input type="text" name="lm" onkeydown="upp2()"><br><br>
+
+        Last Name : <input type="text"><br><br>
+
+        No. of time you have pressed the keys : <p>0</p>
+
+    </form>
+    
+    <script>
+        i=0;
+        $(document).ready(function () {
+            $('input').keypress(function () {
+                $('p').text(i +=1);
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function upp1() {
+            fname.nm.value = fname.nm.value.toUpperCase();
+        }
+        function upp2() {
+            fname.lm.value = fname.lm.value.toUpperCase();
+        }
+    </script>
+
+</body>
+
+</html>

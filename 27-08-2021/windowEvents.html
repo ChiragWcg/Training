@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <title>Windows Events</title>
+        <script src="/jquery-3.6.0.min compressed.js"></script>
+    </head>
+    
+    <body onload="demo()">
+        <h2>Window Events</h2>
+    
+        <script type="text/javascript">
+            function demo() {
+                alert("Alert Box..");
+            }
+    
+            function demo2() {
+                alert("Demo Alert Box..");
+            }
+    
+            function demo3() {
+                alert("You have changed the size of the browser window!");
+            }
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                alert('Document fully loaded.')
+            });
+        </script>
+    </body>
+    
+    <body onunload="demo2()">
+        <p>Note : Due to different browser settings, this event may not always work as expected.</p>
+    </body>
+    
+    <body onresize="demo3()">
+        <h2>Hello,change the size of the browser window.</h2>
+    </body>
+    
+    </html>

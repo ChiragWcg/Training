@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Form Events</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+
+</head>
+
+<body>
+
+    <div style="padding: 10px;">
+        <form name="fname" onsubmit="myfun()">
+            First Name : <input type="text" name="nm" onfocus="demo()" placeholder="first name"><br><br>
+            Last Name : <input type="text" name="lm" value="Last Name"><br><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div><br>
+
+    <div style="padding: 10px;">
+        <form name="frm">
+            Middle Name : <input type="text" name="mm" onblur="blurf()"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div><br>
+
+    <form name="choice">
+        <select name="opt" onchange="mychoice()">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Go">Go</option>
+            <option value="HTML">HTML</option>
+        </select>
+    </form>
+
+    <script type="text/javascript">
+        function demo() {
+            fname.nm.style.backgroundColor = "orange";
+            fname.nm.style.width = "300px";
+        }
+
+        function myfun() {
+            alert('Submitted..');
+        }
+
+        function blurf() {
+            frm.mm.value = frm.mm.value.toUpperCase();
+            frm.mm.style.backgroundColor = "red";
+            frm.mm.style.color = "cyan";
+        }
+
+        function mychoice() {
+            var a = choice.opt.value;
+            document.write("Selected value : " + a);
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('div').focusin(function () {
+                $(this).css('background-color', 'cyan');
+            });
+
+            $('div').focusout(function () {
+                $(this).css('background-color', 'yellow');
+            });
+            
+            $('input').select(function(){
+                alert('You have selected some value');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
+
+<html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                alert($(".div1").width() + 'px - width');
+            });
+
+            $("#btn2").click(function () {
+                alert($(".div1").height() + 'px - height');
+            });
+
+            $("#btn3").click(function () {
+                alert($(".div1").innerWidth() + 'px - innerWidth');
+            });
+
+            $("#btn4").click(function () {
+                alert($(".div1").innerHeight() + 'px - innerHeight');
+            });
+
+            $("#btn5").click(function () {
+                alert($(".div1").outerWidth() + 'px - outerWidth');
+            });
+
+            $("#btn6").click(function () {
+                alert($(".div1").outerHeight() + 'px - outerHeight');
+            });
+
+        });
+    </script>
+
+    <div class="div1" style="width: 200px; height: 110px; margin: 15px; padding: 15px; background-color: aqua; border: 2px solid red;">Div-3 Content
+    </div>
+    <br><br>
+    <button id="btn1">Get width</button>
+    <button id="btn2">Get height</button>
+    <button id="btn3">innerWidth</button>
+    <button id="btn4">innerHeight</button>
+    <button id="btn5">outerWidth</button>
+    <button id="btn6">outerHeight</button>
+</body>
+
+</html>
