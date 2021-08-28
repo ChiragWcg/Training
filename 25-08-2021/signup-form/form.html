@@ -1,0 +1,489 @@
+<html>
+
+<head>
+    <title>Signup Form</title>
+    <!-- jquery file -->
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+
+    <!-- javascript file for validations -->
+    <script src="/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <!-- <script src="/jquery.validate.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script> -->
+
+    <!-- jquery chosen -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+        type="text/javascript"></script>
+
+    <!-- CKEDITOR -->
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/29.1.0/classic/ckeditor.js"></script>
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- timepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <!-- lightbox css -->
+    <link href="src/css/lightbox.css" rel="stylesheet" />
+
+    <style>
+        fieldset {
+            text-align: left;
+            font-size: x-large;
+            padding-top: 15px;
+            width: 55%;
+            padding-bottom: 2px;
+            margin-bottom: 30px;
+        }
+
+        .error {
+            font-size: large;
+            color: red;
+        }
+
+        table tr td {
+            font-size: larger;
+        }
+
+        select:invalid {
+            height: 0px !important;
+            opacity: 0 !important;
+            position: absolute !important;
+            display: flex !important;
+        }
+
+        /* select:invalid[multiple] {
+            margin-top: 15px !important;
+        } */
+    </style>
+
+</head>
+
+<body style="background-image: linear-gradient(rgb(0, 225, 255), rgb(204, 204, 46));">
+    <br>
+    <center>
+        <fieldset>
+            <legend>Signup Form</legend>
+            <form id="myform" method="get">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" id="name" required style="height: 30px; width: 100%;"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="phone" id="phone" required style="height: 30px; width: 100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" id="email" name="email" required style="height: 30px; width: 100%;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                    </tr>
+                    <tr>
+                        <!-- Address -->
+                        <td><textarea name="address" id="address" onkeyup="count(this)" required
+                                style="width: 100%; height: 50px;"></textarea>
+                            <div id="charNum"></div>
+                            <div id="charNum2"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="margin-bottom: 10px;">
+                                <select required="required" id="chosen1" name="chosen1">
+                                    <option value=""></option>
+                                    <option>Ahmedabad</option>
+                                    <option>Junagadh</option>
+                                    <option>Rajkot</option>
+                                    <option>Surat</option>
+                                    <option>Vadodara</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>About Me</td>
+                    </tr>
+                    <tr>
+                        <!-- CKEDITOR-1 -->
+                        <td style="width: 725px;">
+                            <textarea name="editor" id="editor"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Date of Birth <input type="text" id="datepicker" name="datepicker"
+                                    style="margin-top: 5px; height: 30px; width: 100%;" required></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birth Time <input type="text" class="timepicker" id="time" name="time"
+                                style="margin-top: 5px; height: 30px; width: 100%;" required></td>
+                    </tr>
+                    <tr>
+                        <td>Hobbies</td>
+                    </tr>
+                    <tr>
+                        <!-- Hobbies -->
+                        <td>
+                            <div style="margin-bottom: 10px;">
+                                <select required="required" multiple id="chosen2" name="chosen2">
+                                    <option>Reading</option>
+                                    <option>Singing</option>
+                                    <option>Acting</option>
+                                    <option>Dancing</option>
+                                    <option>Swimming</option>
+                                    <option>Riding</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Write your Introduction</td>
+                    </tr>
+                    <tr>
+                        <!-- CKEDITOR-2 -->
+                        <td>
+                            <textarea name="editor1" id="editor1" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- Gallery -->
+                            <style>
+                                .img-container img {
+                                    width: 228px;
+                                }
+                            </style>
+                            <div class="img-container" style="margin-top: 20px; margin-left: 15px;">
+                                <label for="exampleInputGallery">Gallery</label><br><br>
+
+                                <a href="/images/bulb.jpg" data-lightbox="roadtrip"> <img src="/images/bulb.jpg"
+                                        alt="source" />
+                                </a>
+                                <a href="/images/burjAi.jpg" data-lightbox="roadtrip">
+                                    <img src="/images/burjAi.jpg" alt="building.Net" /></a>
+
+                                <a href="/images/controller.jpeg" data-lightbox="roadtrip"> <img
+                                        src="/images/controller.jpeg" alt="machine" /></a>
+
+                                <a href="/images/highway.jpeg" data-lightbox="roadtrip"> <img src="/images/highway.jpeg"
+                                        alt="nature" /></a>
+
+                                <a href="/images/light.jpeg" data-lightbox="roadtrip">
+                                    <img src="/images/light.jpeg" alt="cool" />
+                                </a>
+                                <a href="/images/lumi.jpeg" data-lightbox="roadtrip"> <img src="/images/lumi.jpeg"
+                                        alt="luminious" /></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                <br>
+                <input type="submit" value="Signup" style="margin-left: 16px; font-size: 15px; height: 30px;">
+            </form>
+        </fieldset>
+    </center>
+
+    <!-- Textarea validations -->
+    <script>
+        function count(val) {
+            var len = val.value.length;
+            if (len >= 160) {
+                val.value = val.value.substring(0, 160);
+            }
+            else {
+                $('#charNum').text('You entered no. of characters are : ' + (len));
+                $('#charNum2').text('Remaining no. of characters are : ' + (160 - len));
+            }
+        }
+    </script>
+
+    <!-- lightbox js-file -->
+    <script src="src/js/lightbox.js"></script>
+
+    <!-- document.ready(function()) -->
+    <script>
+        $(document).ready(function () {
+            // chosen
+            $("select").chosen({ width: "100%" });
+
+            // CKEDITOR
+            ClassicEditor.create(document.querySelector('#editor'));
+            CKEDITOR.replace('editor1');
+
+            // lightbox
+            lightbox.option({
+                'imageFadeDuration': 2000,
+                'wrapAround': true
+            });
+
+            // datepicker
+            $(function () {
+                $("#datepicker").datepicker({
+                    changeMonth: true,
+                    changeYear: true
+                });
+            });
+
+            // timepicker
+            (function ($) {
+                $(function () {
+                    $('input.timepicker').timepicker();
+                });
+            })(jQuery);
+
+        });
+    </script>
+
+
+    <!-- dataTables -->
+
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.print.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+
+    <style>
+        #example {
+            border: 2px solid red;
+            background-color: rgb(255, 166, 0);
+            text-align: center;
+        }
+    </style>
+
+    <br><br><br><br>
+    <center>
+        <h1>Data Table Here...</h1>
+    </center><br>
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Navik</td>
+                <td>28</td>
+                <td>GJ</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Yash</td>
+                <td>31</td>
+                <td>RJ</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jay</td>
+                <td>23</td>
+                <td>MP</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Lemin</td>
+                <td>34</td>
+                <td>MH</td>
+                <td>UAE</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
