@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <style>
+        select option[disabled] {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#test1').on('change', function (e) {
+                var className = e.target.value;
+                $('#test2 option').prop('disabled', true);
+                $('#test2').find('option.' + className).prop('disabled', false);
+            });
+        });
+
+    </script>
+    <title>Load Second</title>
+</head>
+
+<body>
+    <select name="test1" id="test1">
+        <option value="Select">Select City</option>
+        <option value="a">Madhya Pradesh</option>
+        <option value="b">Gujarat</option>
+        <option value="c">Maharastra</option>
+    </select>
+
+
+    <select id="test2" name="test2">
+        <option value="Select">Select</option>
+        <option class="a" value="Indore">Indore</option>
+        <option class="a" value="Bhopal">Bhopal</option>
+        <option class="a" value="Ujjain">Ujjain</option>
+        <option class="b" value="Ahemdabad">Ahemdabad</option>
+        <option class="b" value="Rajkot">Rajkot</option>
+        <option class="b" value="Surat">Surat</option>
+        <option class="c" value="Mumbai">Mumbai</option>
+        <option class="c" value="Pune">Pune</option>
+        <option class="c" value="Solapur">Solapur</option>
+    </select>
+
+</body>
+
+</html>

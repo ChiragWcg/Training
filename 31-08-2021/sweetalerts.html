@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>Demo</title>
+    <!-- jquery file -->
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+
+    
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    
+</head>
+
+
+<body>
+    <div>
+        <button id="button-a">Sweet Alert!</button>
+        <button id="title">Title!</button><br><br>
+        <button id="success">Success!</button>
+        <button id="warning">Warning!</button>
+        <button id="error">Error!</button>
+        <button id="info">Info!</button>
+    </div>
+    <script>
+        $('#button-a').click(function () {
+            swal('Welcome in the page!');
+        });
+        $('#title').click(function () {
+            swal({
+                title: "This is use for title!",
+            });
+        });
+        $('#success').click(function () {
+            swal({
+                icon: "success",
+                title: "Task completed Successfully!",
+            });
+        });
+        $('#warning').click(function () {
+            swal({
+                icon: "warning",
+                title: "Task incompleted!",
+            });
+        });
+        $('#error').click(function () {
+            swal({
+                icon: "error",
+                title: "Nothing Done!",
+            });
+        });
+        $('#info').click(function () {
+            swal({
+                icon: "info",
+                title: "Information!!!",
+            });
+        });
+    </script>
+</body>
+
+</html>

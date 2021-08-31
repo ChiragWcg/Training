@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Ajax Demo</title>
+</head>
+
+<body>
+    <script>
+        function Ajaxcall1() {
+            var xttps = new XMLHttpRequest();
+            xttps.onreadystatechange = function () {
+                if (xttps.readyState == 4 && xttps.status == 200) {
+                    document.getElementById('mydata').innerHTML = xttps.responseText;
+                }
+                // else{
+                //     alert('Data not loaded properly');
+                // }
+            };
+            xttps.open('GET', 'text1.txt', true);
+            xttps.send();
+        };
+    </script>
+
+    <script>
+        function Ajaxcall2() {
+            var xttps = new XMLHttpRequest();
+            xttps.onreadystatechange = function () {
+                if (xttps.readyState == 4 && xttps.status == 200) {
+                    document.getElementById('mydata').innerHTML = xttps.responseText;
+                }
+                // else{
+                //     alert('Data not loaded properly');
+                // }
+            };
+            xttps.open('GET', 'text2.txt', true);
+            xttps.send();
+        };
+    </script>
+
+    <div id="mydata">
+        <input type="button" value="DataLoad-text1" onclick="Ajaxcall1()">
+        <input type="button" value="DataLoad-text2" onclick="Ajaxcall2()">
+
+    </div>
+</body>
+
+</html>
