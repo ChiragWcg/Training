@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+    <style>
+        table {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        tr td {
+            padding: 4px;
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+
+            $('#btn1').click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                    success: function (result, status, xhr) {
+                        var table = $("<table><tr><th>UserId</th><th>Id</th><th>Title</th><th>Body</th></tr>");
+                        var tr;
+                        for (var i = 0; i < result.length; i++) {
+                            tr = $("<tr>");
+                            tr.append("<td>" + result[i].userId + "</td>");
+                            tr.append("<td>" + result[i].id + "</td>");
+                            tr.append("<td>" + result[i].title + "</td>");
+                            tr.append("<td>" + result[i].body + "</td>");
+                            tr.append("</tr>");
+                            table.append(tr);
+                        }
+                        table.append("</table>");
+                        $("#div1").html(table);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <button id="btn1">Load Ajax from Online</button><br><br>
+    <div id="div1"></div>
+</body>
+
+</html>

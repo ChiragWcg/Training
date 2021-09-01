@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>    
+    <center>
+        <h1>Dropdown Menu</h1>
+        <div style="width: 30%; height: 53%; border: 2px solid red; padding: 10px;">
+            <select name="state" id="state" style="font-size: x-large;">
+                <option value="">Select State</option>
+            </select>
+            <br><br>
+            <select name="city" id="city" style="font-size: x-large;">
+                <option value="">Select City</option>
+            </select>
+        </div>
+    </center>
+
+    <script>
+        $(document).ready(function () {
+            load_json_data('state');
+            function load_json_data(id, parent_id) {
+                var html_code = '';
+                $.getJSON('states.json', function (data) {
+
+                    html_code += '<option value="">Select ' + id + '</option>';
+                    $.each(data, function (key, value) {
+                        if (id == 'state') {
+                            if (value.parent_id == '0') {
+                                html_code += '<option value="' + value.id + '">' + value.name + '</option>';
+                            }
+                        }
+                        else {
+                            if (value.parent_id == parent_id) {
+                                html_code += '<option value="' + value.id + '">' + value.name + '</option>';
+                            }
+                        }
+                    });
+                    $('#' + id).html(html_code);
+                });
+
+            }
+
+            $(document).on('change', '#state', function () {
+                var state_id = $(this).val();
+                if (state_id != '') {
+                    load_json_data('city', state_id);
+                }
+                else {
+                    $('#city').html('<option value="">Select City</option>');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
