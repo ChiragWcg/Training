@@ -1,0 +1,17 @@
+[
+    {
+        "Product": "iPhone",
+        "Color": "White",
+        "Price": "50,000"
+    },
+    {
+        "Product": "AirPods",
+        "Color": "White",
+        "Price": "22,000"
+    },
+    {
+        "Product": "iPad",
+        "Color": "Pink",
+        "Price": "65,000"
+    }
+]

@@ -1,0 +1,87 @@
+[
+    {
+        "id": "1",
+        "name": "Gujarat",
+        "parent_id": "0"
+    },
+    {
+        "id": "2",
+        "name": "Delhi",
+        "parent_id": "0"
+    },
+    {
+        "id": "3",
+        "name": "Panjab",
+        "parent_id": "0"
+    },
+    {
+        "id": "4",
+        "name": "Madhya Pradesh",
+        "parent_id": "0"
+    },
+    {
+        "id": "5",
+        "name": "Ahmedabad",
+        "parent_id": "1"
+    },
+    {
+        "id": "6",
+        "name": "Rajkot",
+        "parent_id": "1"
+    },
+    {
+        "id": "7",
+        "name": "Surat",
+        "parent_id": "1"
+    },
+    {
+        "id": "8",
+        "name": "Junagadh",
+        "parent_id": "1"
+    },
+    {
+        "id": "9",
+        "name": "New Delhi",
+        "parent_id": "2"
+    },
+    {
+        "id": "10",
+        "name": "Siri",
+        "parent_id": "2"
+    },
+    {
+        "id": "11",
+        "name": "Noida",
+        "parent_id": "2"
+    },
+    {
+        "id": "12",
+        "name": "Jalandhar",
+        "parent_id": "3"
+    },
+    {
+        "id": "13",
+        "name": "Amritsar",
+        "parent_id": "3"
+    },
+    {
+        "id": "14",
+        "name": "Patiala",
+        "parent_id": "3"
+    },
+    {
+        "id": "15",
+        "name": "Indore",
+        "parent_id": "4"
+    },
+    {
+        "id": "16",
+        "name": "Bhopal",
+        "parent_id": "4"
+    },
+    {
+        "id": "17",
+        "name": "Jabalpur",
+        "parent_id": "4"
+    }
+]

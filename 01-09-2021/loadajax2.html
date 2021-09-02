@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>Load Ajax and Files</title>
+    <script src="/jquery-3.6.0.min compressed.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            
+            $('#btn1').click(function () {
+                $("#div1").load("sample.html");
+            });            
+            
+            $(document).ajaxStart(function () {
+                alert('Ajax Request Start');
+            });           
+           
+            $(document).ajaxSuccess(function () {
+                alert("Ajax Request successfully completed");
+            });
+
+            $(document).ajaxError(function () {
+                alert("Ajax Request fails - Error!!");
+            });          
+
+        });
+    </script>
+    
+    <button id="btn1">Load Ajax</button>
+    <br><br>
+   
+    <div id="div1"></div>
+</body>
+
+</html>
