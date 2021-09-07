@@ -1,0 +1,1 @@
+module.exports = 'This is code of File - 1';
