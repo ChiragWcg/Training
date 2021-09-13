@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>Gradients</title>
+    <style>
+        .div1 {
+            height: 300px;
+            width: 400px;
+            background: linear-gradient(to top left, red, orange, yellow, green);
+        }
+
+        .div2 {
+            height: 300px;
+            width: 400px;
+            background: linear-gradient(90deg, rgb(250, 8, 8, 1), rgb(7, 7, 247, 0.5));
+        }
+
+        .div3 {
+            height: 300px;
+            width: 400px;
+            background:repeating-linear-gradient(yellow , green 25%);
+        }
+
+        .div4 {
+            height: 300px;
+            width: 600px;
+            background:radial-gradient(circle, red, yellow , red );
+        }
+
+        .div5 {
+            height: 300px;
+            width: 600px;
+            background:radial-gradient(closest-side at 60% 55%, red, yellow , red );
+            /* background: radial-gradient(farthest-side at 60% 55%, red, yellow, red); */
+            /* background: radial-gradient(closest-corner at 60% 55%, red, yellow, red); */
+            /* background: radial-gradient(farthest-corner at 60% 55%, red, yellow, red); */
+        }
+
+        .div6 {
+            height: 300px;
+            width: 600px;
+            background:repeating-radial-gradient(red, yellow 10% , orange 15% );
+        }
+
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="div1"></div>
+    <br>
+    <div class="div2"></div>
+    <br>
+    <div class="div3"></div>
+    <br>
+    <div class="div4"></div>
+    <br>
+    <div class="div5"></div>
+    <br>
+    <div class="div6"></div>
+</body>
+
+</html>

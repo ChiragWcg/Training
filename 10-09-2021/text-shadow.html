@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Text-Shadow</title>
+    <style>
+        body {
+            background: linear-gradient(to right, cyan, rgb(218, 30, 30));
+        }
+
+        .p1 {
+            text-shadow: 1px 3px red;
+            font-size: 70px;
+        }
+
+        .p2 {
+            text-shadow: 4px 4px 4px greenyellow;
+            font-size: 70px;
+        }
+
+        .p3 {
+            text-shadow: -4px -5px 4px yellow;
+            font-size: 70px;
+            background: cyan;
+            border: 3px solid red;
+            outline: 8px dashed blue;
+            outline-offset: 10px;
+            letter-spacing: 8px;
+            word-spacing: 30px;
+            font-weight: 800;
+            font-variant: small-caps;
+            cursor: pointer;
+            /* word-break: keep-all;  break all words to thr border */
+            /* vertical-align: bottom; */
+            /* overflow: scroll;  same as text overflow  */
+            /* z-index: -1; for overlapping image/elements */
+            /* css tooltip -- hover on text */
+            /* box-sizing: border-box; */
+            /* opacity: 0.5; -- for image */
+        }
+
+        .div1 {
+            height: 1000px;
+            background-image: url('/light.jpeg');
+            opacity: 0.8;
+            background-repeat: repeat-y;
+            background-position: right top;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1">Paragraph - 1</p>
+    <p class="p2">Paragraph - 2</p>
+    <p class="p3">Paragraph - 3</p>
+    <div class="div1">
+    </div>
+</body>
+
+</html>
