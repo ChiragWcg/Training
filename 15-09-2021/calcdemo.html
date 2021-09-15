@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <script>
+
+        class Calc {
+            constructor(initialValue) {
+                this.result = initialValue;
+                return this;
+            }
+            add(value) {
+                this.result = this.result + value;
+                return this;
+            }
+            sub(value) {
+                this.result = this.result - value;
+                return this;
+            }
+            mul(value) {
+                this.result = this.result * value;
+                return this;
+            }
+            div(value) {
+                this.result = this.result / value;
+                return this;
+            }
+            toString() {
+                return this.result;
+            }
+        }
+        var num = new Calc(5).add(5).sub(2).mul(2).div(2);
+        document.write(num);
+        alert(num);
+
+        
+    </script>
+</body>
+
+</html>
