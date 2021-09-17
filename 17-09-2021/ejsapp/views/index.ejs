@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <style>
+    a {
+      color: red;
+      font-weight: 700;
+      font-size: x-large;
+    }
+
+    a:hover {
+      color: rgb(38, 0, 255);
+    }
+  </style>
+
+</head>
+
+<body style="background-color:rgb(193, 255, 201); text-align: center;">
+
+  <a href="/">Home</a> &nbsp; &nbsp;
+  <a href="/about">About</a> &nbsp; &nbsp;
+  <a href="/users">Users</a> &nbsp; &nbsp;
+  <a href="/form">Form</a> &nbsp; &nbsp;
+  <a href="/login">Login</a> &nbsp; &nbsp;
+  <a href="/signup">Signup</a> &nbsp; &nbsp;
+  <a href="/marksheet">Marksheet</a> &nbsp; &nbsp;
+  <h1>
+    <%= title %>
+  </h1>
+
+
+
+  <h2>
+    <p>Welcome to <%= title %>. EJS is a simple templating language that lets you generate, <br> HTML markup with plain
+        JavaScript. No religiousness about how to organize things. <br> No reinvention of iteration and control-flow.
+        It's
+        just plain JavaScript.
+    </p>
+  </h2>
+
+  <br><br><br>
+  <img src="/images/EJS.jpeg" height="360px">
+</body>
+
+</html>
