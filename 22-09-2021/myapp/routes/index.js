@@ -89,7 +89,7 @@ router.post('/form', function (req, res, next) {
   console.log(cname);
   req.session.username = cname;
 
-  console.log("Entered Color value is = " + req.session.username);
+  console.log("Entered Color code is = " + req.session.username);
   res.redirect('/bghome');
 });
 
