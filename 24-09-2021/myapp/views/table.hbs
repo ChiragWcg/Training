@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            font-size: x-large;
+        }
+
+        a {
+            font-size: x-large;
+        }
+
+        table {
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 5px;
+            border: 2px solid red;
+        }
+
+        tr td {
+            padding: 5px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);">
+
+    <table border="3">
+        <tr>
+            {{!-- <th>Sr No.</th> --}}
+            <th>Name</th>
+            <th>Email</th>
+            <th>contact</th>
+            <th>Action</th>
+        </tr>
+        {{#each mydatas}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td>{{contact}}</td>
+                <td>
+                    <a href="/edit/{{_id}}">Edit</a> |
+                    <a href="/delete/{{_id}}">Delete</a>
+
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+    <br>
+    <a href="/form">Go to home</a>
+
+</body>
+
+</html>
