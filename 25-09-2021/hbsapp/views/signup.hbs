@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);">
+    <fieldset style="width: 28%; font-size:x-large; margin-left:32%;">
+        <legend>Signup Form</legend>
+
+        <form method="post">
+            Name <input type="text" name="txt1" style="float: right;"> <br><br>
+            Email <input type="email" name="email1" style="float: right;"> <br><br>
+            Contact <input type="number" name="con1" style="float: right;"> <br><br>
+            Gender
+            <label style="float: right;">Female</label>
+            <input type="radio" id="male" name="gender" value="male" style="float: right;">
+            <label style="float: right;">Male</label>
+            <input type="radio" id="female" name="gender" value="female" style="float: right;">
+            <br><br>
+            DOB <input type="date" name="dob1" style="float: right;"> <br><br>
+            Password <input type="password" name="pass1" style="float: right;"> <br><br>
+            Are you admin ?
+            <select name="admin1">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </fieldset>
+    <br>
+    <center><a href="/login" style="font-size: x-large;">Go to Login</a></center>
+</body>
+
+</html>

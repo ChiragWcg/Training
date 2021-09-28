@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            font-size: x-large;
+        }
+
+        a {
+            font-size: x-large;
+        }
+
+        table {
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 5px;
+            border: 2px solid red;
+        }
+
+        tr td {
+            padding: 5px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);">
+
+    <table border="3">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>contact</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Password</th>
+            <th>IsAdmin</th>
+            <th>Join Date</th>
+            <th>Action</th>
+        </tr>
+        {{#each mydatas}}
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.contact}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.dob}}</td>
+            <td>{{data.password}}</td>
+            <td>{{data.asadmin}}</td>
+            <td>{{data.joindate}}</td>
+            <td>
+                <a href="/edit/{{_id}}">Edit</a> |
+                <a href="/delete/{{_id}}">Delete</a>
+                <a href="/show/{{_id}}">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    <br>
+    <a href="/signup">Go to Signup</a>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Display Data</title>
+</head>
+
+<body>
+    <br>
+    <table border="3">
+        <tr>
+            <th>UserName</th>
+            <th>Contact</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        {{#each user_array}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{contact}}</td>
+            <td>{{email}}</td>
+            <td>
+                <a href="edit/{{_id}}">Edit</a>
+                <a href="delete/{{_id}}">Delete</a>
+            </td>
+        </tr>
+        {{else}}
+        No record found here...
+        {{/each}}
+    </table>
+</body>
+
+</html>
