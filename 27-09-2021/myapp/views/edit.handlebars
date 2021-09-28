@@ -4,14 +4,18 @@
     <title>Edit Form</title>
 </head>
 
-<body>
-    <form method="post">
-        Name: <input type="text" value="{{data.name}}" name="name"> <br><br>
-        Contact: <input type="number" value="{{data.contact}}" name="contact"> <br><br>
-        Email: <input type="email" value="{{data.email}}" name="email"> <br><br>
+<body style="background-color:rgb(193, 255, 201);">
+    <fieldset style="width: 28%; font-size:x-large; margin-left:32%;">
+        <legend>Edit Form</legend>
 
-        <input type="submit" value="Submit" onclick="window.location='display';">
-    </form>
+        <form method="post">
+            Name <input type="text" value="{{data.name}}" name="name" style="float: right;"> <br><br>
+            Contact <input type="number" value="{{data.contact}}" name="contact" style="float: right;"> <br><br>
+            Email <input type="email" value="{{data.email}}" name="email" style="float: right;"> <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </fieldset>
 </body>
 
 </html>

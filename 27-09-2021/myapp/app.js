@@ -33,7 +33,7 @@ app.use(session({
 
 // MongoDB connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/adminproject')
+mongoose.connect('mongodb://adminproject:adminproject@localhost:27017/adminproject')
   .then(() => console.log('Connection successful..'))
   .catch((err) => console.error(err))
 

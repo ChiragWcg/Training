@@ -17,7 +17,7 @@ router.get('/signup', function (req, res, next) {
 
 router.post('/signup', function (req, res, next) {
   console.log(req.body);
-  console.log(req.body.gender);
+  // console.log(req.body.gender);
 
   var mydata = {
     name: req.body.name,
@@ -26,6 +26,7 @@ router.post('/signup', function (req, res, next) {
     password: req.body.password,
     dob: req.body.dob,
     gender: req.body.gender,
+    admin: req.body.admin,
   };
 
   var data = UserModel(mydata);
@@ -56,8 +57,8 @@ router.post('/login', function (req, res, next) {
   UserModel.findOne({ 'email': email }, function (err, data) {
     console.log('Find by one' + data);
 
-    // console.log('db_data.email' + email);
-    // console.log('db_data.password' + password);
+    // console.log('data.email' + email);
+    // console.log('data.password' + password);
 
     if (email == null) {
       console.log('If');
@@ -153,6 +154,87 @@ router.get('/logout', function (req, res) {
   req.session.destroy();
   res.redirect('/');
 });
+
+
+// Forgot password - GET 
+router.get('/forgot-password', function (req, res, next) {
+  res.render('forgot-password');
+});
+
+
+// Forgot password - POST 
+router.post('/forgot-password', function (req, res, next) {
+  var email = req.body.email;
+  console.log(req.body);
+
+  UserModel.findOne({ "email": email }, function (err, data) {
+
+    console.log("Find by one " + data);
+
+    if (data) {
+      var email = data.email;
+      var password = data.password;
+    }
+
+    console.log("data.email " + data.email);
+    console.log("data.password " + data.password);
+
+    if (email == null) {
+      console.log("If...");
+      res.end("Email not found...");
+    }
+    else if (email == email) {
+
+      "use strict";
+      const nodemailer = require("nodemailer");
+
+      async function main() {
+
+        // Generate test SMTP service account from ethereal.email
+        // Only needed if you don't have a real mail account for testing
+        let account = await nodemailer.createTestAccount();
+
+        // create reusable transporter object using the default SMTP transport
+        let transporter = nodemailer.createTransport({
+          // host: "smtp.ethereal.email",
+          host: "smtp.gmail.com",
+          port: 587,
+          secure: false, 
+          auth: {
+            user: "testing.chiragpatel@gmail.com", // generated ethereal user
+            pass:  "chirag.test@11"// generated ethereal password
+          }
+        });
+
+        let mailOptions = {
+          from: 'testing.chiragpatel@gmail.com', // sender address
+          to: "reply.chiragpatel@gmail.com", // receiver
+          subject: "Nodemailer - For email sending ✔", // Subject 
+          text: "Your password is... " + password, // text body
+          html: "your password is... " + password // html body
+        };
+
+        // send mail with defined transport object
+        let info = await transporter.sendMail(mailOptions)
+
+        console.log("Message sent: %s", info.messageId);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+
+        res.end("Password sent to your email...");
+      }
+
+      main().catch(console.error);
+
+      res.render('login');
+    }
+
+    else {
+      console.log("Credentials wrong");
+      res.end("Login invalid");
+    }
+  });
+});
+
 
 
 // Display data 

@@ -2,33 +2,70 @@
 
 <head>
     <title>Display Data</title>
+    <style>
+        body {
+            font-size: x-large;
+        }
+
+        a {
+            font-size: x-large;
+        }
+
+        table {
+            font-size: x-large;
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+
+        th {
+            font-size: x-large;
+            padding: 5px;
+            border: 2px solid red;
+        }
+
+        tr td {
+            padding: 5px;
+            border: 2px solid red;
+        }
+    </style>
 </head>
 
-<body>
-    <br>
+<body style="background-color:rgb(193, 255, 201);">
+    <br><br>
     <table border="3">
         <tr>
-            <th>UserName</th>
-            <th>Contact</th>
+            {{!-- <th>ID</th> --}}
+            <th>Name</th>
             <th>Email</th>
+            <th>contact</th>
+            <th>Gender</th>
+            {{!-- <th>DOB</th> --}}
+            <th>Password</th>
+            {{!-- <th>IsAdmin</th> --}}
+            {{!-- <th>Join Date</th> --}}
             <th>Action</th>
         </tr>
         {{#each data}}
         <tr>
             <td>{{name}}</td>
-            <td>{{contact}}</td>
             <td>{{email}}</td>
+            <td>{{contact}}</td>
+            <td>{{gender}}</td>
+            {{!-- <td>{{dob}}</td> --}}
+            <td>{{password}}</td>
+            {{!-- <td>{{asadmin}}</td> --}}
+            {{!-- <td>{{joindate}}</td> --}}
             <td>
-                <a href="edit/{{_id}}">Edit</a>
-                <a href="delete/{{_id}}">Delete</a>
+                <a href="/edit/{{_id}}">Edit</a> |
+                <a href="/delete/{{_id}}">Delete</a>
+                {{!-- <a href="/show/{{_id}}">Show</a> --}}
             </td>
         </tr>
-        {{else}}
-        No record found here...
         {{/each}}
     </table>
     <br>
-    <a href="/Signup">New Signup</a>
+    <a href="/signup">Go to Signup</a>
+
 </body>
 
 </html>
