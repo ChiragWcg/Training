@@ -26,6 +26,8 @@ router.post('/signup', function (req, res, next) {
     password: req.body.password,
     dob: req.body.dob,
     gender: req.body.gender,
+    address: req.body.address,
+    city: req.body.city,
     admin: req.body.admin,
   };
 
