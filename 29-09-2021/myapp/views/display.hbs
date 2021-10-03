@@ -1,0 +1,190 @@
+{{!-- <html>
+
+<head>
+    <title>Form</title>
+    <style>
+        body {
+            font-size: x-large;
+        }
+
+        a {
+            font-size: x-large;
+        }
+
+        table {
+            border: 2px solid red;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 5px;
+            border: 2px solid red;
+        }
+
+        tr td {
+            padding: 5px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);">
+
+    <table border="3">
+        <tr>
+            <th>Name</th>
+            <th>Details</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{details}}</td>
+            <td>{{price}}</td>
+            <td>{{file}}</td>
+            <td>{{qty}}</td>
+            <td>{{password}}</td>
+            <td>
+                <a href="/edit/{{_id}}">Edit</a> |
+                <a href="/delete/{{_id}}">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+    <br>
+    <a href="/form">Go to home</a>
+
+</body>
+
+</html> --}}
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Products</title>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/admin">c$smart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/form">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/login">Login</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/12.jpg" class="d-block w-100" alt="..." height="500px">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/7.jpg" class="d-block w-100" alt="..." height="500px">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/11.jpg" class="d-block w-100" alt="..." height="500px">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/2.jpg" class="d-block w-100" alt="..." height="500px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    {{!-- <div style="float: right;">
+        <a href="/" class="btn btn-success btn-md" role="button" aria-disabled="true">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="/form" class="btn btn-primary btn-md" role="button" aria-disabled="true">Signup</a>&nbsp;&nbsp;&nbsp;
+        <a href="/login" class="btn btn-danger btn-md" role="button" aria-disabled="true">Login</a>
+        <a href="/admin" class="btn btn-danger btn-md" role="button" aria-disabled="true">Add Product</a>
+    </div><br><br> --}}
+    <br>
+    <center>
+        <h1>List of Products</h1>
+    </center>
+
+    <br>
+    <div class="container">
+        <div class="row row-cols-3">
+            {{#each data}}
+            <div class="col mt-3">
+                <div class="card" style="width: 18rem; border-radius:8px">
+                    <img src="/images/{{photo}}" class="card-img-top" alt="..." height="230px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{pname}}</h5>
+                        <p class="card-text">{{category}}</p>
+                        <p class="card-text">{{details}}</p>
+                        <p class="card-text">Price - {{price}}</p>
+                        <p class="card-text">Quantity - {{qty}}</p>
+                        <hr>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                        <a href="#" class="btn btn-success">Buy Now</a>
+
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

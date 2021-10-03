@@ -1,0 +1,102 @@
+{{!-- <html>
+
+<head>
+    <title>Form</title>
+    <style>
+        a {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body style="background-color:rgb(193, 255, 201);"> <br><br>
+    <fieldset style="width: 28%; font-size:x-large; margin-left:32%;">
+        <legend>User Login</legend>
+
+        <form method="post">
+            <br>
+            Email <input type="email" name="email" style="float: right;"> <br><br>
+            Password <input type="password" name="password" style="float: right;"> <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+        <a href="/form">Create an Account?</a> <br>
+    </fieldset>
+    <br>
+    <center>
+        <a href="/" style="font-size: x-large;">Home</a> &nbsp;&nbsp;&nbsp;
+        <a href="/display" style="font-size: x-large;">Display Data</a>
+    </center>
+</body>
+
+</html> --}}
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>User Login</title>
+    <style>
+        body {
+            background-color: #e9f5f3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="float: right;">
+        <a href="/" class="btn btn-success btn-md" role="button" aria-disabled="true">Home</a> &nbsp;&nbsp;&nbsp;
+        <a href="/form" class="btn btn-danger btn-md" role="button" aria-disabled="true">New User</a> &nbsp;&nbsp;&nbsp;
+        <a href="/change-password" class="btn btn-primary btn-md" role="button" aria-disabled="true">Change-password</a> &nbsp;&nbsp;&nbsp;
+        <a href="/forgot-password" class="btn btn-warning btn-md" role="button" aria-disabled="true">Forgot-password</a> &nbsp;&nbsp;&nbsp;
+        <a href="/display" class="btn btn-success btn-md" role="button" aria-disabled="true">Products</a> &nbsp;&nbsp;&nbsp;
+    </div> <br><br><br><br>
+
+    <center>
+        <h1>User Login</h1>
+    </center><br>
+
+    <div class="row  justify-content-evenly">
+        <div class="col-5">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </form>
+            <br><br><br>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
+
+
