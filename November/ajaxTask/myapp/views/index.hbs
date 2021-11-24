@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+
+
+    <link rel="stylesheet" href="/css/validation.css">
+    <style>
+        /* #sort-order {
+            font-size: 10px;
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            border: 1px solid grey;
+            padding: 0 7px;
+        }
+
+        #sort-order>i {
+            display: none;
+        }
+
+        #sort-order.upOrder>i.fa-caret-up {
+            display: inline;
+        }
+
+        #sort-order.downOrder>i.fa-caret-down {
+            display: inline;
+        } */
+    </style>
+
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Registration Form</h1>
+
+    <div class="col-6" style="margin: auto;">
+        <div class="row-6">
+            <form id="form" name="form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="firstName form-control" id="firstName" name="firstName">
+                </div><br>
+
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName">
+                </div><br>
+
+                <div class="mb-3">
+                    <label>Address</label>
+                    <textarea class="form-control" id="address" name="address"></textarea>
+                </div><br>
+
+                <label for="exampleInputText1" class="form-label">Gender</label>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+
+                <input class="form-check-input" type="hidden" name="temp" id="temp"><br><br>
+
+                <div id="hobbies">
+                    <label for="exampleInputText2" class="form-label">Hobbies</label>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="hobbies" value="Traveling">
+                        <label class="form-check-label" for="flexCheckDefault">Traveling</label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="hobbies" value="Swimming">
+                        <label class="form-check-label" for="flexCheckDefault">Swimming</label>
+                    </div>
+                </div>
+
+                <input class="form-check-input" type="hidden" name="temp" id="temp2"><br><br>
+
+                <div class="form-check mb-3">
+                    <label for="imagefile" class="form-label">Select Image</label>
+                    <input type="file" class="form-control" id="imagefile" name="imagefile">
+                </div><br>
+
+                <div class="form-check mb-3">
+                    <label for="exampleInputSelect1" class="form-label">Select area</label>
+                    <select class="form-select" aria-label="Default select example" name="interest" id="interest">
+                        <option disabled selected value="">Areas</option>
+                        <option value="Tivoli">Tivoli</option>
+                        <option value="Orcade">Orcade</option>
+                        <option value="Eden">Eden</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btn" name="btn" class="btn btn-primary">Submit</button>
+                <div class="btns"></div>
+
+            </form>
+            <br><br>
+
+        </div>
+    </div>
+
+    <div class="col-3" style="margin:auto">
+        {{!-- <div class="col-sm-6 col-md-6"> --}}
+            <div id="example_filter" class="dataTables_filter">
+                <label>Search:
+                    <input type="search" name="search" id="search" class="search form-control form-control-sm" placeholder="" aria-controls="example">
+                </label>
+                <label for="exampleInputSelect1" class="form-label">Select Gender</label>
+                    <select class="form-select" aria-label="Default select example" name="gender" id="gender">
+                        <option  selected value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>  
+            </div>
+                      
+        {{!-- </div>    --}}
+        <br>
+         <button type="submit" id="searchBtn" name="searchBtn" class="searchBtn btn-primary">Search</button>         
+    </div>
+    <br><br>
+    <div class="col-4" style="float: right;">
+        <button type="submit" id="exportBtn" name="exportBtn" class="exportBtn btn-success">Export</button> &nbsp;&nbsp;&nbsp;
+        <button type="submit" id="exportEmailBtn" name="exportEmailBtn" class="exportEmailBtn btn-warning">Export to Email</button>
+    </div>
+   <br><br>
+
+    <div class="col-9" style="margin: auto;">
+        <table id="table1" class="table1 table table-hover">
+
+            <thead>
+                <tr id="trdata" class="trdata">                    
+                    <th><a href="javascript:void[0]" id="firstName" class="sortingClass" sortOrder="1">Name</a>
+                    </th>
+                    {{!-- <th><a href="javascript:void[0]" id="lastName" class="sortingClass" sortOrder="1">Last Name</a></th> --}}
+                    <th><a href="javascript:void[0]" id="gender" class="sortingClass" sortOrder="1">Gender</a></th>
+                    <th><a href="javascript:void[0]" id="address" class="sortingClass" sortOrder="1">Address</a></th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablebody">
+                {{#each user}}
+                <tr class="{{_id}}">
+                    <td>{{firstName}}</td>
+                    {{!-- <td>{{lastName}}</td> --}}
+                    <td>{{gender}}</td>
+                    <td>{{address}}</td>
+                    <td><img src="/images/{{imagefile}}" alt="" height="100px" width="155px"></td>
+
+                    <td class="text-center">
+                        <button class="editBtn btn btn-primary" id="{{_id}}">Edit</button>
+                        <button class="deleteBtn btn btn-danger" id="{{_id}}">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {{!-- <li class="page-item"><a class="pageBtn page-link" id="previous" href="javascript:void[0]">Previous</a></li> --}}
+                <li class="page-item"><a class="pageBtn page-link" id="1" page="1" href="javascript:void[0]">1</a></li>
+                <li class="page-item"><a class="pageBtn page-link" id="2" page="2" href="javascript:void[0]">2</a></li>
+                <li class="page-item"><a class="pageBtn page-link" id="3" page="3" href="javascript:void[0]">3</a></li>
+                {{!-- <li class="page-item"><a class="pageBtn page-link" id="next" href="javascript:void[0]">Next</a></li> --}}
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/ajaxcode.js"></script>
+
+</body>
+
+</html>
