@@ -1,0 +1,30 @@
+{
+    "scheduler":"on/off",
+    "files":{
+        "cronImportCsv":{
+            "time":"*/5 * * * * *",
+            "name":"cronImportCsv.js",
+            "active":true
+        },
+        "cron-job2":{
+            "time":"*/5 * * * * *",
+            "name":"cron-job2.js",
+            "active":false
+        },
+        "cron-job3":{
+            "time":"*/5 * * * * *",
+            "name":"cron-job3.js",
+            "active":false
+        }
+    },
+    "port":3000,
+    "mongodb":
+    {
+        "localhost": "localhost",
+        "port":"27017",
+        "username":"chirag",
+        "password":"chirag",
+        "database":"chirag"
+    }
+    
+}

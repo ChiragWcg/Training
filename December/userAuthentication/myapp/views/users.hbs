@@ -1,0 +1,135 @@
+<br>
+<div style="padding-left: 81%;">
+    <a href="/addUser" class="btn btn-primary btn">User Form</a>
+    <button class="logout btn-danger btn" type="submit">Logout</button>
+    {{!-- <button type="submit" id="exportBtn" name="exportBtn" class="exportBtn btn-success btn-sm">Export</button> --}}
+   
+    <br><br>
+</div>
+<br>
+<h1 style="text-align: center;">User Details</h1><br>
+{{!-- user details - name, email, contact --}}
+<div class="col-6" style="margin: auto;">
+    <div class="row-6">
+        <table id="table1" class="table1 table table-hover">
+            <thead>
+                <tr id="trdata" class="trdata">
+                    <th>name</th>
+                    <th>email</th>
+                    <th>contact</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablebody">
+                {{#each user}}
+                <tr class="{{_id}}">
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{contact}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+
+<div class="col-6" style="margin: auto;">
+    <div class="row-6">
+        <form id="csvform" name="csvform" enctype="multipart/form-data">
+            {{!-- select any csv file --}}
+            <div class="form-check mb-3">
+                <label for="file" class="form-label">Select file</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".csv">
+            </div>
+            <br>
+            <button type="submit" id="btn" name="btn" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" style="margin-left: 4%;">Import</button>
+
+
+            <!-- Button trigger modal -->
+            {{!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button> --}}
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Map fields</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table id="csvTbl3" class="csvTbl3 table table-hover">
+                                <div>
+                                    <h4 class="dataId"></h4>
+                                    {{!-- <h4 class="dataId">Add new field</h4> --}}
+                                </div>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label" style="font-size: x-large;">Add new
+                                        field</label>
+                                    <input type="text" class="name form-control field" id="field" name="field">
+                                </div>
+                                <button type="button" id="addBtn" name="addBtn" class="btn btn-primary addBtn">Add
+                                    field</button>
+                                <br><br>
+                                <div class="form-check">
+                                    <input class="form-check-input checkbox" type="checkbox" id="skipHeader" name="checkbox">
+                                    <label class="form-check-label" for="skipHeader">
+                                        If header, present in the file
+                                    </label>
+                                </div>
+
+                                <thead>
+                                    <tr id="trdata" class="trdata">
+                                        <th>First row</th>
+                                        <th>Second row</th>
+                                        <th>Fields</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="csvTbl" class="csvTbl"></tbody>
+
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" id="uploadBtn" name="uploadBtn"
+                                class="btn btn-primary uploadBtn">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </form>
+    <br><br>
+
+    <table id="csvTbl2" class="csvTbl2 table table-hover">
+        <h4 class="dataId"></h4>
+        {{!-- <h4 class="dataId">File Data</h4> --}}
+        {{!-- <thead>
+            <tr id="trdata" class="trdata">
+                <th>Select</th>
+                <th>First row</th>
+                <th>Second row</th>
+                <th>Fields</th>
+            </tr>
+        </thead> --}}
+    </table>
+    {{!-- <button type="submit" id="uploadBtn" name="uploadBtn" class="uploadBtn btn btn-warning"
+        style="float: right;">Upload</button> --}}
+</div>
+</div>
+
+<br><br>
+
+<script src="/js/user.js"></script>
+
+
+
+
+
+{{!--
+<script src="/js/bootstrap.js"></script> --}}

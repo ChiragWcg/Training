@@ -13,28 +13,6 @@
 
 
     <link rel="stylesheet" href="/css/validation.css">
-    <style>
-        /* #sort-order {
-            font-size: 10px;
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            border: 1px solid grey;
-            padding: 0 7px;
-        }
-
-        #sort-order>i {
-            display: none;
-        }
-
-        #sort-order.upOrder>i.fa-caret-up {
-            display: inline;
-        }
-
-        #sort-order.downOrder>i.fa-caret-down {
-            display: inline;
-        } */
-    </style>
 
     <title>Registration Form</title>
 </head>
@@ -111,7 +89,6 @@
     </div>
 
     <div class="col-3" style="margin:auto">
-        {{!-- <div class="col-sm-6 col-md-6"> --}}
             <div id="example_filter" class="dataTables_filter">
                 <label>Search:
                     <input type="search" name="search" id="search" class="search form-control form-control-sm" placeholder="" aria-controls="example">
@@ -123,8 +100,6 @@
                         <option value="female">Female</option>
                     </select>  
             </div>
-                      
-        {{!-- </div>    --}}
         <br>
          <button type="submit" id="searchBtn" name="searchBtn" class="searchBtn btn-primary">Search</button>         
     </div>
@@ -142,7 +117,6 @@
                 <tr id="trdata" class="trdata">                    
                     <th><a href="javascript:void[0]" id="firstName" class="sortingClass" sortOrder="1">Name</a>
                     </th>
-                    {{!-- <th><a href="javascript:void[0]" id="lastName" class="sortingClass" sortOrder="1">Last Name</a></th> --}}
                     <th><a href="javascript:void[0]" id="gender" class="sortingClass" sortOrder="1">Gender</a></th>
                     <th><a href="javascript:void[0]" id="address" class="sortingClass" sortOrder="1">Address</a></th>
                     <th>Image</th>
@@ -154,7 +128,6 @@
                 {{#each user}}
                 <tr class="{{_id}}">
                     <td>{{firstName}}</td>
-                    {{!-- <td>{{lastName}}</td> --}}
                     <td>{{gender}}</td>
                     <td>{{address}}</td>
                     <td><img src="/images/{{imagefile}}" alt="" height="100px" width="155px"></td>
@@ -169,17 +142,13 @@
             </tbody>
         </table>
         <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                {{!-- <li class="page-item"><a class="pageBtn page-link" id="previous" href="javascript:void[0]">Previous</a></li> --}}
-                <li class="page-item"><a class="pageBtn page-link" id="1" page="1" href="javascript:void[0]">1</a></li>
-                <li class="page-item"><a class="pageBtn page-link" id="2" page="2" href="javascript:void[0]">2</a></li>
-                <li class="page-item"><a class="pageBtn page-link" id="3" page="3" href="javascript:void[0]">3</a></li>
-                {{!-- <li class="page-item"><a class="pageBtn page-link" id="next" href="javascript:void[0]">Next</a></li> --}}
+            <ul class="pagination">               
+                {{#each pages}}
+                    <li class="page-item"><a class="pageBtn page-link active" id="{{this}}" page="{{this}}" href="javascript:void[0]">{{this}}</a></li>
+                {{/each}}               
             </ul>
         </nav>
     </div>
-
-
 
     <script src="/js/bootstrap.js"></script>
     <script src="/js/ajaxcode.js"></script>

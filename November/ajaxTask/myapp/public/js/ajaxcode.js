@@ -243,7 +243,7 @@ $(document).ready(function () {
             $(this).attr('sortOrder', 1);
         }
         $.ajax({
-            url: '/sortdata',
+            url: '/',
             method: 'POST',
             data: sortingObj,
             success: function (modeldata) {
@@ -251,7 +251,7 @@ $(document).ready(function () {
 
                 // empty the tablebody 
                 $('#tablebody').empty();
-                for (let getdata of modeldata) {
+                for (let getdata of modeldata.result) {
                     let newUser = `<tr>               
                                         <td>${getdata.firstName}</td>
                                         <td>${getdata.gender}</td>
@@ -289,7 +289,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/sortdata",
+            url: "/",
             data: pageObj,
             success: function (modeldata) {
                 console.log('Pagination in success ---- ');
@@ -313,10 +313,10 @@ $(document).ready(function () {
                     $('#tablebody').append(newUser);
                 }
                 // empty the pagination class
-                $(".pagination").empty();                
-                for(i=1; i<=modeldata.result2; i++){
-                    $(".pagination").append(`<li class="page-item"><a class="pageBtn page-link" id="${i}" page="${i}" href="javascript:void[0]">${i}</a></li>`)
-                }
+                // $(".pagination").empty();                
+                // for(i=1; i<=modeldata.result2; i++){
+                //     $(".pagination").append(`<li class="page-item"><a class="pageBtn page-link" id="${i}" page="${i}" href="javascript:void[0]">${i}</a></li>`)
+                // }
             },
             error: function (result) {
                 alert('Error in pagination')
@@ -338,7 +338,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/sortdata",
+            url: "/",
             data: searchObj,
             success: function (modeldata2) {
                 console.log('Searching in success ---- ');
@@ -347,7 +347,7 @@ $(document).ready(function () {
                 $('#tablebody').empty();
                 console.log('++++++++++');
                 console.log(modeldata2);
-                for (let getdata of modeldata2) {
+                for (let getdata of modeldata2.result) {
                     let newUser = `<tr>               
                                         <td>${getdata.firstName}</td>
                                         <td>${getdata.gender}</td>
@@ -380,11 +380,11 @@ $(document).ready(function () {
 
         $.ajax({
             type: "post",
-            url: "/sortdata",
+            url: "/",
             data: exportObj,
             success: function (modeldata) {
                       console.log('Exporting data---------');  
-                      console.log(modeldata);     
+                      console.log(modeldata.csvData);     
             },
             error: function (result) {
                 alert('Error in export....')

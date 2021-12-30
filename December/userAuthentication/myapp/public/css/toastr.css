@@ -1,0 +1,9 @@
+/* this will set the toastr icon */
+ #toast-container > .toast-custom {
+    content: "\f00C";
+}
+
+/* this will set the toastr style */
+.toast-custom {
+    background-color: rgb(247, 72, 28);
+}
